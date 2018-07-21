@@ -38,10 +38,10 @@ function startTest() {
 function change(buttonNumber) {
 
     if (counter === 0 && buttonNumber == firstPosRight) {
-        timerIncrement();
+        timerOutIncrement();
         $('#eng').effect('highlight', {color: '#70e086'});
     } else if (counter !== 0 && buttonNumber === firstPosRight) {
-        timerIncrement();
+        timerOutIncrement();
         $('#eng').effect('highlight', {color: '#70e086'});
     } else {
         $('#eng').effect('highlight', {color: '#e01f20'});
@@ -120,9 +120,11 @@ function getWrongList(engWord, rusWord) {
 
 }
 
+
+
 var timerGo = setInterval(function() {
     if(counter > 0) {
-        timerDecriment();
+        timerOutDecriment();
     }
     if(timerOut <= 0){
         alert("Лучше повтори слова");
@@ -131,11 +133,11 @@ var timerGo = setInterval(function() {
     }
 }, 1000);
 
-function timerIncrement() {
+function timerOutIncrement() {
     timerOut += 3;
     $("#testTimer").html(timerOut);
 }
-function timerDecriment() {
+function timerOutDecriment() {
     timerOut--;
     $("#testTimer").html(timerOut);
 }
