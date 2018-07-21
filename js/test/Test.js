@@ -1,13 +1,19 @@
 
+
 var firstPosRight;
 var shuffle ;  //перемешиваем массив слов
 var wrongMass = [];  //массив неверных слов
 var counter ;
-var timer = 20;
+var timerOut = 20;
+
+
+
 startTest();  //начало теста
 
 
 function startTest() {
+    timerOut = 20;
+    $("#testTimer").html(timerOut);
     //TODO очистить добавление на Html неверных слов
     $('#wrongWords').hide();
     $('#testArea').show();
@@ -32,8 +38,10 @@ function startTest() {
 function change(buttonNumber) {
 
     if (counter === 0 && buttonNumber == firstPosRight) {
+        timerIncrement();
         $('#eng').effect('highlight', {color: '#70e086'});
     } else if (counter !== 0 && buttonNumber === firstPosRight) {
+        timerIncrement();
         $('#eng').effect('highlight', {color: '#70e086'});
     } else {
         $('#eng').effect('highlight', {color: '#e01f20'});
@@ -110,6 +118,26 @@ function getWrongList(engWord, rusWord) {
         '<div class="rusWord">' + rusWord + '</div>' +
         '</div>');
 
+}
+
+var timerGo = setInterval(function() {
+    if(counter > 0) {
+        timerDecriment();
+    }
+    if(timerOut <= 0){
+        alert("Лучше повтори слова");
+        startTest();
+
+    }
+}, 1000);
+
+function timerIncrement() {
+    timerOut += 3;
+    $("#testTimer").html(timerOut);
+}
+function timerDecriment() {
+    timerOut--;
+    $("#testTimer").html(timerOut);
 }
 
 

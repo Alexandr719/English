@@ -4,7 +4,7 @@ var currentAnswer;
 var presentDays = new Date(); //число запуска теста
 var twoDays = new Date("2018","6","9"); //месяц - 1
 var oneWeek = new Date("2018","6","13");
-var twoWeek = new Date("2018","6","18");
+var twoWeek = new Date("2018","7","21");
 
 if(twoDays > presentDays){
     currentAnswer = "Хорошее начало";
