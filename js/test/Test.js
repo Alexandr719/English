@@ -73,7 +73,7 @@ function change(buttonNumber) {
             $('#wrongWords').show();
 
 
-        }else{ alert(currentAnswer);}
+        }else{ alert("Повторил слова"+ new Date());}
 
     }
 }

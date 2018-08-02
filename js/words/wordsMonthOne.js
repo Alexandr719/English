@@ -76,7 +76,7 @@ var words = [
     { engWord: ' Tangible ', rusWord: ' Материальный ' },
     { engWord: ' Trident ', rusWord: ' Трезубец ' },
     { engWord: ' Tumble ', rusWord: ' Упасть ' }
-]
+];
 	
 	
 	
