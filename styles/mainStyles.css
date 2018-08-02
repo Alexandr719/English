@@ -18,3 +18,10 @@ a {
     width: 500px;
     background-color: #e03366;
 }
+.rus:first-letter{
+    text-transform: uppercase;
+
+}
+#eng:first-letter{
+    text-transform: uppercase;
+}
