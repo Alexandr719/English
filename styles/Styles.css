@@ -26,6 +26,9 @@ body{
     padding: 20px 0px;
     margin: 40px auto;
 }
+#eng:first-letter{
+    text-transform: uppercase;
+}
 #flex{
     display: flex;
     flex-direction: row;
