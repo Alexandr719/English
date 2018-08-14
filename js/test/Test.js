@@ -1,8 +1,7 @@
-
 var firstPosRight;
-var shuffle ;  //перемешиваем массив слов
+var shuffle;  //перемешиваем массив слов
 var wrongMass = [];  //массив неверных слов
-var counter ;
+var counter;
 var timer = 20;
 startTest();  //начало теста
 
@@ -15,7 +14,6 @@ function startTest() {
     shuffle = words.sort(compareRandom);  //перемешиваем массив слов
     wrongMass = [];  //массив неверных слов
     counter = 0;
-
 
 
 //начальное заполенение
@@ -65,7 +63,9 @@ function change(buttonNumber) {
             $('#wrongWords').show();
 
 
-        }else{ alert(currentAnswer);}
+        } else {
+            alert(currentAnswer);
+        }
 
     }
 }
