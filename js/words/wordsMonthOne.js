@@ -78,7 +78,6 @@ var words = [
     { engWord: ' Tumble ', rusWord: ' Упасть ' }
 ];
 	
-	
-	
+
 
 	

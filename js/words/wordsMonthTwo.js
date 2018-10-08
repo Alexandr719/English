@@ -6,13 +6,12 @@ var words = [
     { engWord: ' sofa ', rusWord: ' диван' },
     { engWord: ' newspaper ', rusWord: ' газета' },
     { engWord: ' paper ', rusWord: ' бумага' },
-    { engWord: ' answer ', rusWord: ' ответ ' },
     { engWord: ' glad ', rusWord: ' довольный' },
     { engWord: ' something ', rusWord: ' нечто' },
-    { engWord: ' here ', rusWord: ' вот' },
+    { engWord: ' here ', rusWord: ' вот, здесь' },
     { engWord: ' sold ', rusWord: ' продан' },
-    { engWord: ' how ', rusWord: ' сейчас' },
-    { engWord: ' now ', rusWord: ' как ' },
+    { engWord: ' now ', rusWord: ' сейчас' },
+    { engWord: ' how ', rusWord: ' как ' },
     { engWord: ' joy ', rusWord: ' радость' },
     { engWord: ' share ', rusWord: ' доля' },
     { engWord: ' to tidy ', rusWord: ' чтобы привести в порядок ' },
@@ -22,8 +21,7 @@ var words = [
     { engWord: ' explore', rusWord: ' исследовать' },
     { engWord: ' answer', rusWord: ' ответ' },
     { engWord: ' bench', rusWord: ' скамейка' },
-    { engWord: ' pupils', rusWord: ' ученики ' },
-    { engWord: ' pupils', rusWord: ' зрачки ' },
+    { engWord: ' pupils', rusWord: ' ученики, зрачки' },
     { engWord: ' exercising', rusWord: ' осуществление ' },
     { engWord: ' pretty', rusWord: ' cимпатичный ' },
     { engWord: ' neightbour', rusWord: ' сосед ' },
@@ -43,7 +41,7 @@ var words = [
     { engWord: ' magazine', rusWord: ' журнал' },
     { engWord: ' tired', rusWord: ' устала' },
     { engWord: ' motorway', rusWord: ' автомагистраль' },
-    { engWord: 'need', rusWord: ' необходимость' },
+    { engWord: ' need', rusWord: ' необходимость' },
     { engWord: ' fit', rusWord: ' поместиться' },
     { engWord: ' contain', rusWord: ' содержать' },
     { engWord: ' uptight', rusWord: ' встревоженный' },
@@ -70,3 +68,10 @@ var words = [
     { engWord: ' crest', rusWord: ' гребень' },
     { engWord: ' prefer', rusWord: ' предпочитать' }
     ];
+
+
+
+
+
+
+

@@ -19,7 +19,6 @@ body{
     height: 50px;
     width: auto;
     color: white;
-    font-family: Castellar;
     background-color: #2aa9e0;
     font-size: 40px;
     text-align: center;
@@ -30,9 +29,10 @@ body{
     text-transform: uppercase;
 }
 #flex{
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
 }
@@ -44,7 +44,7 @@ body{
     font-size: 25px;
     text-align: center;
     padding: 15px 15px;
-    margin-top: 40px;
+    margin: 40px 10px;
 }
 #wrongWords{
     margin-top: 10px;

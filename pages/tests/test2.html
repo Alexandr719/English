@@ -25,12 +25,7 @@
         <button onclick="change(4)" class="rus" id="button4"></button>
     </div>
 
-    <div id="timer">До повторения осталось:
-        <span id="days"></span> days
-        <span id="hours"></span> hours
-        <span id="minutes"></span> minutes
-        <span id="seconds"></span> seconds
-    </div>
+
 
 </div>
 
@@ -44,7 +39,11 @@
 
 </div>
 <button onclick="startTest()">Restart</button>
-
+<select id = "test_level" size="1" name="test_level">
+    <option  value="Easy">Easy</option>
+    <option selected value=Middle>Middle</option>
+    <option value="Hard">Hard</option>
+</select>
 
 
 
@@ -54,7 +53,6 @@
 
 <script src="../../js/words/wordsMonthTwo.js"></script>
 <script src="../../js/test/Test.js"></script>
-
 
 
 </body>

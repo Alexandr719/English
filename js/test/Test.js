@@ -1,18 +1,29 @@
 
-
 var firstPosRight;
 var shuffle ;  //перемешиваем массив слов
 var wrongMass = [];  //массив неверных слов
 var counter ;
-var timerOut = 20;
+
+var leveltimeOut = 20;
+
+$( "#test_level" ).change(function() {
+  var select_val = $("select#test_level").val();
+    if(select_val == "Easy"){
+        leveltimeOut = 50;
+    }else if(select_val == "Hard"){
+        leveltimeOut = 15;
+    }else{
+        leveltimeOut = 20;
+    }
+    startTest();
+});
 
 
 
 startTest();  //начало теста
 
-
 function startTest() {
-    timerOut = 20;
+    timerOut = leveltimeOut;
     $("#testTimer").html(timerOut);
     //TODO очистить добавление на Html неверных слов
     $('#wrongWords').hide();
@@ -73,7 +84,7 @@ function change(buttonNumber) {
             $('#wrongWords').show();
 
 
-        }else{ alert("Повторил слова"+ new Date());}
+        }else{ alert("Повторил слова (" + $("select#test_level").val()+ ")"+ new Date());}
 
     }
 }
