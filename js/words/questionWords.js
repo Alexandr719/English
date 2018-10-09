@@ -11,6 +11,4 @@ var words = [
     {engWord: ' How long', rusWord: ' как долго ' },
     {engWord: ' Whose ', rusWord: ' чей' },
     {engWord: ' Whom ', rusWord: '  кому, кем, кого' }
-
-
 ];
