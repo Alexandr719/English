@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Itim Cyrillic; /* Гарнитура шрифта */
+    src: url(../fonts/11988.otf); /* Путь к файлу со шрифтом */
+}
+
+a {
+    font-size: 30px;
+}
+
+* {
+    font-family: Itim Cyrillic;
+}
+
+.wrapper a {
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+   width: 90%;
+    background-color: #e03366;
+}
+.rus:first-letter{
+    text-transform: uppercase;
+
+}
+.opacity-main-fon{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+    z-index:-5;
+}
+

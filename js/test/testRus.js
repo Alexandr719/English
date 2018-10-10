@@ -1,0 +1,189 @@
+
+let firstPosRight;
+let shuffle ;  //перемешиваем массив слов
+let wrongMass = [];  //массив неверных слов
+let counter ;
+let leveltimeOut = 20;
+
+
+let select_val = $("select#words_category").val();
+startCards(select_val);
+
+$("#words_category").change(function () {
+    select_val = $("select#words_category").val();
+    startCards(select_val);
+});
+
+
+function startCards(select_val) {
+    wordsList.forEach(function (item, i, arr) {
+        if (item.category === select_val) {
+            words = item.wordsList;
+        }
+
+    });
+
+    startTest();
+
+}
+
+
+
+
+
+
+
+
+
+$( "#test_level" ).change(function() {
+    let select_val = $("select#test_level").val();
+    if(select_val == "Easy"){
+        leveltimeOut = 50;
+    }else if(select_val == "Hard"){
+        leveltimeOut = 15;
+    }else{
+        leveltimeOut = 20;
+    }
+    startTest();
+});
+
+
+
+
+
+startTest();  //начало теста
+
+function startTest() {
+    timerOut = leveltimeOut;
+    $("#testTimer").html(timerOut);
+    //TODO очистить добавление на Html неверных слов
+    $('#wrongWords').hide();
+    $('#testArea').show();
+    firstPosRight = Math.floor(Math.random() * 4) + 1;
+    shuffle = words.sort(compareRandom);  //перемешиваем массив слов
+    wrongMass = [];  //массив неверных слов
+    counter = 0;
+
+
+
+//начальное заполенение
+    $('#eng').html(shuffle[counter].rusWord);
+    $('#button' + firstPosRight).html(shuffle[counter].engWord);
+    for (var i = 0; i < 5; i++) {
+        if (i != firstPosRight) {
+            $('#button' + i).html(shuffle[i + 2].engWord);
+        }
+    }
+    $('#counter').html("0/" + shuffle.length);
+}
+
+function change(buttonNumber) {
+
+    if (counter === 0 && buttonNumber == firstPosRight) {
+        timerOutIncrement();
+        $('#eng').effect('highlight', {color: '#70e086'});
+    } else if (counter !== 0 && buttonNumber === firstPosRight) {
+        timerOutIncrement();
+        $('#eng').effect('highlight', {color: '#70e086'});
+    } else {
+        $('#eng').effect('highlight', {color: '#e01f20'});
+        wrongMass.push(shuffle[counter]);
+    }
+    counter++;
+    $('#counter').html(counter + "/" + shuffle.length);
+    if (counter < shuffle.length) {
+        firstPosRight = Math.floor(Math.random() * 4) + 1;
+        $('#eng').html(shuffle[counter].rusWord);
+        $('#button' + firstPosRight).html(shuffle[counter].engWord);
+        var randomMass = generateRandomMass(counter);
+        var j = 1;
+        for (var i = 1; i < 5; i++) {
+
+            if (i != firstPosRight) {
+
+                $('#button' + i).html(shuffle[randomMass[j]].engWord);
+                j++;
+            }
+        }
+    } else {
+        if (wrongMass.length > 0) {
+            for (var k = 0; k < wrongMass.length; k++) {
+                getWrongList(wrongMass[k].engWord, wrongMass[k].engWord);
+
+            }
+            $('#testArea').hide();
+            $('#wrongWords').show();
+
+
+        }else{ alert("Повторил слова (" + $("select#test_level").val()+ ")"+ new Date());}
+
+    }
+}
+
+function generateRandomMass(rigntNumber) {
+    var outArray = []; // массив, в котором будем хранить уникальные числа
+    outArray[0] = rigntNumber;
+    var i = 1; // индекс для массива
+    var countNum = 4; // количество нужных чисел
+    var max = shuffle.length; // максимальное число
+    var min = 0; // минимальное  число
+    // цикл, пока не получим массив с уникальными числами
+
+    while (i < countNum) {
+        var chislo = Math.floor((Math.random() * max) + min); // генерим случайное число
+        if (find(outArray, chislo) == 0) { // Проверяем уникальность числа.
+            outArray[i] = chislo; // если уникальное, то заисываем его в массив
+            i++;
+        }
+
+    }
+
+    // проверяем вхождение в массив
+    function find(array, value) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == value) return 1;
+        }
+        return 0;
+    }
+
+    return outArray;
+}
+
+function compareRandom(a, b) {
+    return Math.random() - 0.5;
+}
+
+//вставка неверных слов
+function getWrongList(engWord, rusWord) {
+
+    $("#wrongWords").append('<div class="wrongWord">' + '<div class="engWord">' + engWord + '</div>' +
+        '<div class="rusWord">' + rusWord + '</div>' +
+        '</div>');
+
+}
+
+
+
+var timerGo = setInterval(function() {
+    if(counter > 0) {
+        timerOutDecriment();
+    }
+    if(timerOut <= 0){
+        alert("Лучше повтори слова");
+        startTest();
+
+    }
+}, 1000);
+
+function timerOutIncrement() {
+    timerOut += 3;
+    $("#testTimer").html(timerOut);
+}
+function timerOutDecriment() {
+    timerOut--;
+    $("#testTimer").html(timerOut);
+}
+
+
+
+

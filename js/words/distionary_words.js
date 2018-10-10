@@ -258,28 +258,14 @@ wordsList.push(words_4);
      $("#words_category").append("<option value=" + item.category + ">" + item.category + "</option>");
  });
 
-
-let select_val = $("select#words_category").val();
-startCards(select_val);
-
-$("#words_category").change(function() {
-    select_val = $("select#words_category").val();
-    startCards(select_val);
+wordsList.forEach(function(item, i, arr) {
+    $(".tabs").append( "<li class=\"tab col s1\"><a href=\"#test1\"><h6 onclick=f("+item.category+")>"
+        + item.category +"</h6></a></li>");
 });
 
-
-function startCards(select_val) {
-    wordsList.forEach(function(item, i, arr) {
-        if(item.category ===select_val ){
-            words = item.wordsList;
-        }
-
-    });
-
-    startRotatate();
-
+function f(a) {
+  alert(a);
 }
-
 
 
 

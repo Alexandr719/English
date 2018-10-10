@@ -68,10 +68,3 @@ var words = [
     { engWord: ' crest', rusWord: ' гребень' },
     { engWord: ' prefer', rusWord: ' предпочитать' }
     ];
-
-
-
-
-
-
-

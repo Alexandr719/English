@@ -1,24 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles/grid_cards.css">
     <meta charset="UTF-8">
     <title>English Cards</title>
     <link rel="stylesheet" href="styles/mainStyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 </head>
+
 <body>
 
-<div class="wrapper">
-    <a href="pages/cardsPages/card.html">Cards</a>
-    <a href="pages/tests/test.html">Test</a>
-    <a href="pages/tests/test2.html">Test2</a>
-    <a href="pages/tests/introductoryTest.html">Introductory test</a>
-    <a href="pages/tests/questionTest.html">Question words test</a>
-    <a href="pages/tests/haedCore.html">HardCore</a>
-    <a href="pages/InWork/imWork.html">Rules</a>
-    <a href="pages/dictionary/dictionary.html">Dictionary</a>
-</div>
-
-<img class="opacity-main-fon" src="img/fon.jpg" alt="">
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="styles/materialize/js/materialize.min.js"></script>
 </body>
+<div id="wrapper">
+    <main>
+    <ul class="grid">
+        <li class="grid__item">
+
+            <a href="pages/cardsPages/card.html" class="card">
+                <div class="card__image">
+                    <img src="img/free-business-cards-psd-mockup-y4.jpg" alt="cards"/>
+                </div>
+                <article class="card__content">
+                    <h2 class="card__title">Cards</h2>
+                    <div class="card__body">
+                        <p>Memorize the words by cards.</p>
+                    </div>
+
+                </article>
+            </a>
+
+        </li>
+        <li class="grid__item">
+
+            <a href="pages/tests/test.html" class="card">
+                <div class="card__image">
+                    <img src="img/The-classy-way-to-approach-context-driven-testing.png" alt=""/>
+                </div>
+                <article class="card__content">
+                    <h2 class="card__title">Test Eng-Rus</h2>
+                    <div class="card__body">
+                        <p>Complete the test, translate from english to russian</p>
+                    </div>
+                    <div class="card__footer">
+                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+                    </div>
+                </article>
+            </a>
+
+        </li>
+        <li class="grid__item">
+
+            <a href="pages/tests/testRus.html" class="card">
+                <div class="card__image">
+                    <img src="img/The-classy-way-to-approach-context-driven-testing.png" alt=""/>
+                </div>
+                <article class="card__content">
+                    <h2 class="card__title">Test Rus-Eng</h2>
+                    <div class="card__body">
+                        <p>Complete the test, translate from english to russian</p>
+                    </div>
+                    <div class="card__footer">
+                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+                    </div>
+                </article>
+            </a>
+
+        </li>
+        <li class="grid__item">
+
+            <a href="pages/InWork/imWork.html" class="card">
+                <div class="card__image">
+                    <img src="img/know-the-rules.jpg" alt=""/>
+                </div>
+                <article class="card__content">
+                    <h2 class="card__title">Rules</h2>
+                    <div class="card__body">
+                        <p>Learn rules.</p>
+                    </div>
+                    <div class="card__footer">
+                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+                    </div>
+                </article>
+            </a>
+
+        </li>
+        <li class="grid__item">
+
+            <a href="pages/InWork/imWork.html" class="card">
+                <div class="card__image">
+                    <img src="img/dictionary.jpg" alt=""/>
+                </div>
+                <article class="card__content">
+                    <h2 class="card__title">Distionary</h2>
+                    <div class="card__body">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card__footer">
+                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+                    </div>
+                </article>
+            </a>
+
+        </li>
+    </ul>
+</div>
+</main>
+
 </html>

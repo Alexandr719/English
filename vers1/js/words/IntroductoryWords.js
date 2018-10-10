@@ -31,8 +31,9 @@ var words = [
     {engWord: ' I don`t care about', rusWord: '  Меня не заботит (это)'},
     {engWord: ' I suppose', rusWord: ' Я полагаю,'},
     {engWord: ' In my view ', rusWord: ' С моей точки зрения'},
-    {engWord: ' To my mind, In my opinion ', rusWord: ' По-моему '},
-    {engWord: ' I am convinced', rusWord: ' Я убежден '},
+    {engWord: ' To my mind ', rusWord: ' По-моему '},
+    {engWord: ' In my opinion', rusWord: ' По-моему '},
+    {engWord: ' I am convinced', rusWord: ' Я убежден, '},
     {engWord: ' Personally, I believe', rusWord: ' Лично я считаю, '},
     {engWord: ' Many people believe', rusWord: ' Многие люди считают, '},
     {engWord: ' As far as I remember', rusWord: ' Насколько я помню'},
@@ -59,7 +60,7 @@ var words = [
     {engWord: ' In total', rusWord: ' в общей сложности.'},
     {engWord: ' It is estimated', rusWord: ' По оценкам'},
     {engWord: ' If it is no longer', rusWord: ' Если это уже не'},
-    {engWord: ' To sum up', rusWord: ' Подведем итоги'},
+    {engWord: ' To sum up', rusWord: ' Подведем итоги.'},
     {engWord: ' In addition', rusWord: ' В дополнительном'},
     {engWord: ' In conclusion', rusWord: ' В заключение'}
 
