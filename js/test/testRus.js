@@ -108,7 +108,7 @@ function change(buttonNumber) {
     } else {
         if (wrongMass.length > 0) {
             for (var k = 0; k < wrongMass.length; k++) {
-                getWrongList(wrongMass[k].engWord, wrongMass[k].engWord);
+                getWrongList(wrongMass[k].engWord, wrongMass[k].rusWord);
 
             }
             $('#testArea').hide();
