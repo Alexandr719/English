@@ -2,7 +2,7 @@
     cursor: pointer;
     height: 300px;
     width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
 
 }
 .rulesCard img{
@@ -39,5 +39,5 @@ position: absolute;
     justify-items: center;
 }
 .rulesCard:hover{
-    box-shadow: 0 1px 1px 0 rgb(0, 0, 0), 0 1px 1px 0 rgb(0, 0, 0);
+   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
