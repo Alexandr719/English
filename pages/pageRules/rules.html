@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../../styles/rulesCard.css">
+    <link rel="stylesheet" href="../../styles/side_nav.css">
+    <link rel="stylesheet" href="../../styles/mainStyles.css">
 </head>
 <body>
+<nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+    <ul class="navbar-nav">
+        <li><a href="../../index.html">Home</a></li>
+
+    </ul>
+</nav>
+
+<div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="../../index.html">Home</a>
+
+</div>
+
+
+
+
+<div id="main">
 <div class="rulesArea">
 
     <div class="rulesCard">
@@ -31,6 +60,6 @@
 
 
 </div>
-
+</div>
 </body>
 </html>

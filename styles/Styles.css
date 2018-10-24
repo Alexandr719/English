@@ -16,7 +16,7 @@ body{
 }
 
 #eng{
-    height: 50px;
+
     width: auto;
     color: white;
     background-color: #2aa9e0;
@@ -44,7 +44,11 @@ body{
     font-size: 25px;
     text-align: center;
     padding: 15px 15px;
-    margin: 40px 10px;
+    margin: 10px 10px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+.rus:hover{
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
 #wrongWords{
     margin-top: 10px;
