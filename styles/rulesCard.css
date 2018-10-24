@@ -1,0 +1,43 @@
+.rulesCard{
+    cursor: pointer;
+    height: 300px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+
+}
+.rulesCard img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rulesCard div{
+    position: absolute;
+    height: 90px;
+    width: 30px;
+    background-color: #e03366;
+    border-radius: 0px 10px 0px 10px ;
+}
+
+.rulesCard div span{
+position: absolute;
+    left: -15px;
+    top: 20px;
+    font-size: 25px;
+    word-wrap: normal;
+    -moz-transform: rotate(90deg); /* Для Firefox */
+    -ms-transform: rotate(-0deg); /* Для IE */
+    -webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(90deg); /* Для Opera */
+    transform: rotate(90deg);
+}
+.rulesArea{
+    margin: 20px;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(250px,1fr));
+    grid-gap: 10px;
+    justify-items: center;
+}
+.rulesCard:hover{
+   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+}

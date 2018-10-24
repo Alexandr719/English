@@ -32,7 +32,7 @@ body {
 
 .card {
     margin: 60px auto;
-    width: 400px;
+    width: 450px;
     height: 200px;
     cursor: pointer;
 
@@ -134,12 +134,16 @@ body {
     border-radius: 2px;
     color: white;
     -webkit-border-before: none;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
 
 }
 
 .wordButton:last-of-type {
     margin-top: -100px;
     background-color: #e03366;
+}
+.wordButton:hover{
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
 #currentEngWord:first-letter,#currentRusWord:first-letter{
     text-transform: uppercase;
