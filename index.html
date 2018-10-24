@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>English Cards</title>
     <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/side_nav.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 </head>
@@ -14,7 +15,35 @@
 
 
 <div id="wrapper">
-    <main>
+    <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+
+    </div>
+
+
+
+
+
+
+    <div id="main">
     <ul class="grid">
         <li class="grid__item">
 
@@ -44,7 +73,7 @@
                         <p>Complete the test, translate from english to russian</p>
                     </div>
                     <div class="card__footer">
-                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+
                     </div>
                 </article>
             </a>
@@ -62,7 +91,7 @@
                         <p>Complete the test, translate from english to russian</p>
                     </div>
                     <div class="card__footer">
-                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+
                     </div>
                 </article>
             </a>
@@ -80,7 +109,7 @@
                         <p>Learn rules.</p>
                     </div>
                     <div class="card__footer">
-                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+
                     </div>
                 </article>
             </a>
@@ -98,15 +127,15 @@
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="card__footer">
-                        in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+
                     </div>
                 </article>
             </a>
 
         </li>
     </ul>
-    </main>
+    </div>
 </div>
-
+<script src="js/side_nav.js"></script>
 </body>
 </html>
