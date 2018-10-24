@@ -105,22 +105,18 @@ body {
 
 
 
-@media all and (max-width: 752px) {
+@media all and (max-width: 600px) {
 
     .cardContainer:nth-child(3), .cardContainer:nth-child(4) {
         margin-top: 3%;
     }
-
-}
-
-@media all and (max-width: 390px) {
-
-    .card {
-        width: 100%;
-
+    .card{
+        width: 90%;
     }
 
 }
+
+
 
 .wordButton {
     display: block;
