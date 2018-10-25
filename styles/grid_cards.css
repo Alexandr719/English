@@ -2,7 +2,7 @@
 .grid {
     margin: 0 auto;
     display: grid;
-    width: 100%;
+    width: 90%;
     max-width:1000px;
     padding: 8px;
     list-style-type: none;
