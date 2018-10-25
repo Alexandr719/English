@@ -87,7 +87,7 @@ let questionWords =   [
     {engWord: ' Whose ', rusWord: ' чей' },
     {engWord: ' Whom ', rusWord: '  кому, кем, кого' }
 ];
-let words_2 = new WordWithCategory(questionWords,"Question");
+let words_2 = new WordWithCategory(questionWords, "Question");
 
 let oneMonthWords = [
     { engWord:  'Bathroom', rusWord: ' Ванная' },
@@ -168,7 +168,7 @@ let oneMonthWords = [
     { engWord: ' Trident ', rusWord: ' Трезубец ' },
     { engWord: ' Tumble ', rusWord: ' Упасть ' }
 ];
-let words_3 = new WordWithCategory(oneMonthWords,"First");
+let words_3 = new WordWithCategory(oneMonthWords, "First");
 
 let twoMonthWords =  [
     { engWord: ' honest ', rusWord: ' честный ' },
@@ -240,8 +240,80 @@ let twoMonthWords =  [
     { engWord: ' crest', rusWord: ' гребень' },
     { engWord: ' prefer', rusWord: ' предпочитать' }
 ];
-let words_4 = new WordWithCategory(twoMonthWords,"Second");
+let words_4 = new WordWithCategory(twoMonthWords, "Second");
 
+let weather = [
+    {engWord: ' weather ', rusWord: ' погода'},
+    {engWord: ' weather forecast', rusWord: ' прогноз погоды'},
+    {engWord: ' weatherman ', rusWord: ' метеоролог'},
+    {engWord: ' weather station', rusWord: ' метеорологическая станция'},
+    {engWord: ' daylight saving time (= DSV) / summer time (BrE)', rusWord: ' летнее время'},
+    {engWord: ' bright / clear', rusWord: ' ясный'},
+    {engWord: ' sunny ', rusWord: ' солнечный'},
+    {engWord: ' muggy ', rusWord: '  влажная и душная' },
+    {engWord: ' sultry ', rusWord: ' знойный, душный'},
+    {engWord: ' dry ', rusWord: ' сухой'},
+    {engWord: ' hot ', rusWord: ' жаркий'},
+    {engWord: ' warm ', rusWord: ' теплый'},
+    {engWord: ' sticky ', rusWord: ' жаркий и влажный '},
+    {engWord: ' fresh ', rusWord: ' свежий'},
+    {engWord: ' heat ', rusWord: ' жара, зной'},
+    {engWord: ' cool ', rusWord: '  прохладный, свежий'},
+    {engWord: ' chilly ', rusWord: '  холодный, прохладный'},
+    {engWord: ' cold ', rusWord: ' холодный'},
+    {engWord: ' hazy / misty / foggy', rusWord: ' туманный'},
+    {engWord: ' windy ', rusWord: ' ветреный'},
+    {engWord: ' frosty / freezing', rusWord: ' морозный'},
+    {engWord: ' cloudy ', rusWord: ' облачный'},
+    {engWord: ' sky ', rusWord: ' небо'},
+    {engWord: ' cloud ', rusWord: ' облако, туча'},
+    {engWord: ' dense clouds', rusWord: ' густые облака'},
+    {engWord: ' low, black clouds', rusWord: ' низкие, черные облака'},
+    {engWord: ' heavy grey clouds', rusWord: ' огромные темные тучи'},
+    {engWord: ' overcast ', rusWord: ' покрытый облаками, мрачный, хмурый (о небе)'},
+    {engWord: ' sun ', rusWord: ' солнце'},
+    {engWord: ' moon ', rusWord: ' луна'},
+    {engWord: ' star ', rusWord: ' звезда'},
+    {engWord: ' wind ', rusWord: ' ветер'},
+    {engWord: ' cold wind', rusWord: ' холодный ветер'},
+    {engWord: ' cold biting wind', rusWord: '  холодный резкий ветер'},
+    {engWord: ' breath of air / puff of wind', rusWord: ' дуновение ветерка'},
+    {engWord: ' breeze ', rusWord: ' бриз'},
+    {engWord: ' slight wind / moderate wind', rusWord: ' легкий ветерок'},
+    {engWord: ' gale / strong wind', rusWord: ' сильный ветер'},
+    {engWord: ' gust of wind', rusWord: ' порыв ветра'},
+    {engWord: '  hurricane / very strong wind', rusWord: ' ураган, буря'},
+    {engWord: ' blizzard ', rusWord: ' снежная буря'},
+    {engWord: ' blinding snowstorm', rusWord: ' буран'},
+    {engWord: ' squall ', rusWord: ' шквал'},
+    {engWord: ' storm ', rusWord: ' шторм'},
+    {engWord: ' whirlwind ', rusWord: ' вихрь, ураган, торнадо'},
+    {engWord: '  tornado / twister (AmE)', rusWord: '  торнадо, смерч, ураган'},
+    {engWord: ' thunderstorm ', rusWord: ' гроза'},
+    {engWord: ' lightning ', rusWord: ' молния'},
+    {engWord: ' thunder ', rusWord: ' гром'},
+    {engWord: ' it lightens', rusWord: ' сверкает молния'},
+    {engWord: '  it thunders', rusWord: ' гремит гром'},
+    {engWord: ' thunder-cloud', rusWord: '  грозовая туча'},
+    {engWord: ' dark ', rusWord: ' темный'},
+    {engWord: ' humidity ', rusWord: ' сырость, влажность'},
+    {engWord: ' frost ', rusWord: ' мороз'},
+    {engWord: ' shower ', rusWord: ' ливень'},
+    {engWord: ' drizzle ', rusWord: ' моросящий дождь'},
+    {engWord: ' precipitation ', rusWord: ' осадки'},
+    {engWord: ' rain ', rusWord: ' дождь; идти (о дожде)'},
+    {engWord: ' snow ', rusWord: ' снег; идти (о снеге)'},
+    {engWord: ' snowfall ', rusWord: ' снегопад'},
+    {engWord: ' snowdrift ', rusWord: ' снежный сугроб'},
+    {engWord: ' snowflake ', rusWord: ' снежинка'},
+    {engWord: ' hail ', rusWord: ' град'},
+    {engWord: ' storm ', rusWord: ' буря'},
+    {engWord: ' mist ', rusWord: ' легкий туман, дымка'},
+    {engWord: ' fog ', rusWord: ' густой туман'},
+    {engWord: ' dew ', rusWord: ' роса'},
+    {engWord: ' sleet ', rusWord: '  дождь со снегом'}
+];
+let words_5 = new WordWithCategory(weather, "Weather");
 
 //конечный объект со всеми словами
 let wordsList = [];
@@ -249,6 +321,7 @@ wordsList.push(words_1);
 wordsList.push(words_2);
 wordsList.push(words_3);
 wordsList.push(words_4);
+wordsList.push(words_5);
 
 
 //вставка в select всех категорий слов
@@ -261,9 +334,7 @@ wordsList.forEach(function(item, i, arr) {
         + item.category +"</h6></a></li>");
 });
 
-function f(a) {
-  alert(a);
-}
+
 
 
 
