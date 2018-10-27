@@ -473,7 +473,6 @@ wordsList.push(words_4);
 wordsList.push(words_5);
 wordsList.push(words_6);
 
-
 //вставка в select всех категорий слов
  wordsList.forEach(function(item, i, arr) {
      $("#words_category").append("<option value=" + item.category + ">" + item.category + "</option>");
