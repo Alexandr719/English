@@ -5,6 +5,12 @@
     box-shadow: 0 2px 5px rgb(0, 0, 0);
 
 }
+
+.disactive{
+
+    opacity: 0.2;
+}
+
 .rulesCard img{
     display: block;
     width: 100%;
@@ -21,7 +27,7 @@
 
 .rulesCard div span{
 position: absolute;
-    left: -15px;
+    left: -11px;
     top: 20px;
     font-size: 25px;
     word-wrap: normal;
