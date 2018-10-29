@@ -37,9 +37,11 @@ function startCards(select_val) {
 
 $( "#test_level" ).change(function() {
     let select_val = $("select#test_level").val();
-    if(select_val == "Easy"){
+    if(select_val === "Easy"){
         leveltimeOut = 50;
-    }else if(select_val == "Hard"){
+    }else if(select_val === "Suck"){
+        leveltimeOut = 1000;
+    }else if(select_val === "Hard"){
         leveltimeOut = 15;
     }else{
         leveltimeOut = 20;
