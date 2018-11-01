@@ -1,5 +1,9 @@
 .navbar{
-    background-color:#851988;
+
+    background: -webkit-linear-gradient(45deg, #851988 50%, #4583ff); /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+    background: -moz-linear-gradient(45deg, #851988 50%, #4583ff); /* Firefox 3.6-15 */
+    background: -o-linear-gradient(45deg, #851988 50%, #4583ff); /* Opera 11.1-12 */
+    background:linear-gradient(45deg  ,#851988 50% , #4583ff);
     overflow:hidden;
     height:63px;
 }
