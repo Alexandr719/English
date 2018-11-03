@@ -14,5 +14,16 @@
   font-size: 2em;
 }
 .rule_content{
+  margin: 2em 20%;
   display: grid;
+  font-size: 70px;
+
+}
+
+.rule_content_header{
+  background-size: cover;
+  background-image: url("zywfqvrx.png");
+  background-repeat: no-repeat;
+  color: transparent;
+  -webkit-background-clip: text;
 }
