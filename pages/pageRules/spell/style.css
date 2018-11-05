@@ -27,3 +27,7 @@
   color: transparent;
   -webkit-background-clip: text;
 }
+@media (max-width: 800px) {
+  #main,  .rule_content,.main_header_title {font-size: 20px;}
+
+}
