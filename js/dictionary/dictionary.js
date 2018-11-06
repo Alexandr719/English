@@ -1,21 +1,52 @@
+let checked_values = [];
 
-let dictionary_words = [];
-wordsList.forEach(function (itemList) {
-     itemList.wordsList.forEach(function (item) {
-         dictionary_words.push(item);
-     });
+
+//Add check_box
+wordsList.forEach(function (item, i, arr) {
+    let checkbox_field = $("#checkbox_fields");
+    checkbox_field.append("<input class='check_box' type='checkbox' id=" + item.category + "  name=" + item.category + " value=" + item.category + " checked>");
+    checkbox_field.append("<label for=" + item.category + ">" + item.category + "</label>");
+    checked_values.push(item.category);
+    filterDictionary(checked_values);
 });
 
 
-for(let i = 0 ; i < dictionary_words.length; i++){
-    let word_item = document.createElement('div');
-    word_item.className = "word_item";
-    $('<div>', { class: 'word_list_eng', text: dictionary_words[i].engWord}).appendTo(word_item);
-    $('<div>', { class: 'word_list_rus', text: dictionary_words[i].rusWord}).appendTo(word_item);
-    $('.word_list').append(word_item);
+function filterDictionary(checked_values) {
+    let dictionary_words = [];
+    wordsList.forEach(function (itemList) {
+        if (checked_values.indexOf(itemList.category) !== -1) {
+            itemList.wordsList.forEach(function (item) {
+                dictionary_words.push(item);
+            });
+        }
+
+        inputIntoHtml(dictionary_words);
+    })
 }
 
 
+function inputIntoHtml(dictionary_words) {
+    $(".word_list").empty();
+    for (let i = 0; i < dictionary_words.length; i++) {
+        let word_item = document.createElement('div');
+        word_item.className = "word_item";
 
+        $('<div>', {class: 'word_list_eng', text: dictionary_words[i].engWord}).appendTo(word_item);
+        $('<div>', {class: 'word_list_rus', text: dictionary_words[i].rusWord}).appendTo(word_item);
+        $('.word_list').append(word_item);
+    }
+}
+
+$('.check_box').change(
+    function () {
+        if ($(this).is(':checked')) {
+            checked_values.push(this.value);
+
+        } else {
+            checked_values.splice(checked_values.indexOf(this.value), 1);
+
+        }
+        filterDictionary(checked_values);
+    });
 
 

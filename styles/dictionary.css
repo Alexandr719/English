@@ -11,14 +11,12 @@ body{
 
 }
 
-
-
 * {
     font-family: Itim Cyrillic;
 }
 .word_list{
     margin-top: 10px;
-    color: white;
+    color: black;
     font-size: 2.3em;
     display: flex;
     flex-direction: column;
@@ -35,7 +33,7 @@ margin-top: 10px;
 }
 .word_list_eng{
    width: 500px;
-    border-radius: 10px;
+
     text-align: center;
     padding: 3px 10px;
     background-color: #e03366 ;
@@ -44,7 +42,7 @@ margin-top: 10px;
 }
 .word_list_rus{
     width: 500px;
-    border-radius: 10px;
+
     padding: 3px 10px;
     text-align: center;
     background-color: #2aa9e0;
@@ -56,7 +54,9 @@ margin-top: 10px;
 .word_list_eng:first-letter{
     text-transform: uppercase;
 }
-
+#checkbox_fields{
+   font-size: 20px;
+}
 
 @media all and (max-width : 1000px) {
     .word_item {
