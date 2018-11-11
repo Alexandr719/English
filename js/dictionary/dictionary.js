@@ -4,22 +4,29 @@ let checked_values = [];
 //Add check_box
 wordsList.forEach(function (item, i, arr) {
     let checkbox_field = $("#checkbox_fields");
-    checkbox_field.append("<input class='check_box' type='checkbox' id=" + item.category + "  name=" + item.category + " value=" + item.category + " checked>");
-    checkbox_field.append("<label for=" + item.category + ">" + item.category + "</label>");
+    let div_field = document.createElement('div');
+    $(div_field).append("<input class='check_box' type='checkbox' id=" + item.category + "  name=" + item.category + " value=" + item.category + " checked>");
+    $(div_field).append("<label for=" + item.category + ">" + item.category + "</label>");
+    checkbox_field.append(div_field);
     checked_values.push(item.category);
     filterDictionary(checked_values);
 });
 
 
-function filterDictionary(checked_values) {
+function filterDictionary(checked_values, patternText) {
     let dictionary_words = [];
     wordsList.forEach(function (itemList) {
         if (checked_values.indexOf(itemList.category) !== -1) {
             itemList.wordsList.forEach(function (item) {
-                dictionary_words.push(item);
+                if(patternText !== undefined ){
+                    if(item.engWord.toLowerCase().indexOf(patternText) !== -1
+                        || item.rusWord.toLowerCase().indexOf(patternText) !== -1)
+                    dictionary_words.push(item);
+                }else {
+                    dictionary_words.push(item);
+                }
             });
         }
-
         inputIntoHtml(dictionary_words);
     })
 }
@@ -50,3 +57,17 @@ $('.check_box').change(
     });
 
 
+$('#search_word').keyup(function (e) {
+    filterDictionary(checked_values, e.target.value.toLowerCase());
+});
+
+
+$('.filtrbtn').click(function(){
+    if($('.filter').is(":visible")){
+        $('.filter').hide("slow" );
+    }else{
+        $('.filter').show("slow" );
+    }
+
+
+});

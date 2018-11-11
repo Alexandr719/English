@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: Itim Cyrillic; /* Гарнитура шрифта */
     src: url(../fonts/11988.otf); /* Путь к файлу со шрифтом */
@@ -55,8 +57,34 @@ margin-top: 10px;
     text-transform: uppercase;
 }
 #checkbox_fields{
+    display: flex;
+    flex-direction: column;
    font-size: 20px;
 }
+.filter{
+    display: none;
+    padding: 20px;
+
+}
+
+
+#search_word{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: calc(99% - 200px);
+    width: 200px;
+    text-align: center;
+}
+
+.filtrbtn{
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    margin-left: calc(99% - 100px);
+
+}
+
+
 
 @media all and (max-width : 1000px) {
     .word_item {
@@ -65,3 +93,4 @@ margin-top: 10px;
         border-radius: 10px;
     }
 }
+
