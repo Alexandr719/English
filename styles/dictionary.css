@@ -71,7 +71,7 @@ margin-top: 10px;
 #search_word{
     font-size: 25px;
     margin-top: 30px;
-    margin-left: calc(99% - 200px);
+    margin-left: calc(98% - 260px);
     width: 200px;
     text-align: center;
 }
@@ -80,13 +80,17 @@ margin-top: 10px;
     cursor: pointer;
     font-size: 20px;
     position: absolute;
-    margin-left: calc(99% - 100px);
+    margin-left: calc(98% - 120px);
 
 }
 
 
 
 @media all and (max-width : 1000px) {
+
+
+
+
     .word_item {
         grid-template-columns:repeat(1,1fr);
         background-color: #e03366;

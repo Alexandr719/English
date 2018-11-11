@@ -1,4 +1,5 @@
 let checked_values = [];
+let pattern_words = undefined;
 
 
 //Add check_box
@@ -53,12 +54,13 @@ $('.check_box').change(
             checked_values.splice(checked_values.indexOf(this.value), 1);
 
         }
-        filterDictionary(checked_values);
+        filterDictionary(checked_values,pattern_words);
     });
 
 
 $('#search_word').keyup(function (e) {
-    filterDictionary(checked_values, e.target.value.toLowerCase());
+    pattern_words = e.target.value.toLowerCase()
+    filterDictionary(checked_values, pattern_words);
 });
 
 
