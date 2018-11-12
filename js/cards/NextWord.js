@@ -22,7 +22,7 @@ function nextWord() {
 }
 
 function prevWord() {
-    if (massIndex == 0) {
+    if (massIndex === 0) {
         massIndex = words.length - 1;
     } else {
         massIndex--;
@@ -51,10 +51,10 @@ function randomize() {
 }
 
 function playAudio() {
-    let audio_url = 'https://ssl.gstatic.com/dictionary/static/sounds/20160317/' + soundWord + '--_gb_1.mp3';
-    let playSound = new Audio(audio_url);
-    playSound.play();
-}
+    let msg = new SpeechSynthesisUtterance(soundWord);
+    msg.lang = 'en-US';
+    window.speechSynthesis.speak(msg);
+ }
 
 $(".fa-volume-up").click(function () {
     playAudio();
