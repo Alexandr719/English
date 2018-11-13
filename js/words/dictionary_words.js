@@ -467,6 +467,7 @@ let words_6 = new WordWithCategory(despicable_me,"Despicable_me");
 let professions = [
     {engWord: '	Driving instructor', rusWord: 'Автоинструктор '},
     {engWord: ' Motor mechanic ', rusWord: 'Автомеханик	'},
+    {engWord: 'Lorry driver  ', rusWord: 'Dодитель грузовика	'},
     {engWord: ' Agronomist ', rusWord: 'Агроном	'},
     {engWord: ' Lawyer, attorney ', rusWord: 'Адвокат	'},
     {engWord: ' Administrator , manager ', rusWord: 'Администратор	'},
