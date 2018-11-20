@@ -41,8 +41,10 @@ $( "#test_level" ).change(function() {
         leveltimeOut = 50;
     }else if(select_val === "Suck"){
         leveltimeOut = 1000;
-    }else if(select_val === "Hard"){
+    }else if(select_val === "Hard") {
         leveltimeOut = 15;
+    }else if(select_val === "Painful_death"){
+            leveltimeOut = 2;
     }else{
         leveltimeOut = 20;
     }
