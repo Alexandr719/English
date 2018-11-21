@@ -5,7 +5,7 @@ function Pipe() {
     this.bottom = height - (this.top + this.spacing);
     this.x = width;
     this.w = 80;
-    this.speed = 6;
+    this.speed = 5;
 
     this.highlight = false;
 
@@ -25,10 +25,18 @@ function Pipe() {
          if (this.highlight) {
              fill(255, 0, 0);
          }
-         rect(this.x, 0, this.w, this.top);
+         fill(255,255,255);
+        rect(this.x, 0, this.w, this.top);
+        text('Дом', this.x+this.w, this.top/2);
+
         rect(this.x, this.top, this.w, this.top);
+        text('Лошадь', this.x+this.w, 3*this.top/2);
+
         rect(this.x, 2*this.top, this.w, this.top);
+        text('Холм', this.x+this.w, 5*this.top/2);
+
         rect(this.x, 3*this.top, this.w, this.top);
+        text('Доктор', this.x+this.w, 7*this.top/2);
 
         // rect(this.x, height-this.bottom, this.w, this.bottom);
     };

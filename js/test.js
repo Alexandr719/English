@@ -27,7 +27,7 @@ let professions = [
     {engWord: '	Broker ', rusWord: 'Брокер '},
     {engWord: '	Bookkeeper , accountant ', rusWord: 'Бухгалтер '},
     {engWord: ' Web designer', rusWord:'Веб-дизайнер'},
-    {engWord: '	Maker-up', rusWord: 'Верстальщик '},
+    {engWord: '	Maker-move', rusWord: 'Верстальщик '},
     {engWord: '	Veterinarian, vet ', rusWord: 'Ветеринар '},
     {engWord: '	Visagiste , makeup artist ', rusWord: 'Визажист '},
     {engWord: '	Winemaker', rusWord: 'Винодел '},
