@@ -1,0 +1,34 @@
+.grid{
+    margin: 10px auto;
+    display: grid;
+    width: 80%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid_item{
+    border: 2px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+
+
+}
+.bg_film{
+    background-image: url("../img/films.jpg");
+}
+.bg_text{
+    background-image: url("../img/papers.jpg");
+}
+.bg_game{
+    background-image: url("../img/gamepad.png");
+}
+.bg_rule{
+    background-image: url("../img/rule.jpg");
+}
+.bg_dict{
+    background-image: url("../img/dictionary2.jpg");
+}
+
+hr{
+    color: black;
+}
