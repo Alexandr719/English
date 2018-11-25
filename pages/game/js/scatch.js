@@ -7,7 +7,6 @@ var pipes = [];
 function setup() {
     createCanvas($(window).width(), $(window).height());
     skyImage = loadImage("e6.jpg");
-    skyImage2 = loadImage("duck.jpg");
     bird = new Bird();
     pipes.push(new Pipe());
 }
@@ -31,14 +30,12 @@ function draw() {
     bird.update();
     bird.show();
 
-    if (frameCount % 75 == 0) {
+    if (frameCount % 90 == 0) {
         pipes.push(new Pipe());
     }
 }
 
-function keyPressed() {
-    if (key == ' ') {
-        bird.up();
-        //console.log("SPACE");
-    }
+
+function mouseMoved() {
+   bird.move(mouseY);
 }

@@ -56,7 +56,7 @@ function playAudio() {
     window.speechSynthesis.speak(msg);
  }
 
-$(".fa-volume-up").click(function () {
+$(".fa-volume-move").click(function () {
     playAudio();
 });
 
