@@ -1,0 +1,24 @@
+.main_block{
+    font-size: 5em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.main_block span{
+    margin: 1em auto;
+}
+
+.main_block input{
+    margin: 0.5em auto;
+    width: 450px;
+    font-size: 0.5em;
+}
+.main_block button{
+    margin: 0.2em auto;
+    width: 400px;
+    font-size: 0.5em;
+}
