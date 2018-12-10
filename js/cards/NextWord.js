@@ -19,6 +19,8 @@ function nextWord() {
         massIndex++;
     }
     pasteWordInHtmlByIndex(massIndex);
+
+    $('#counter').text(massIndex % words.length + " / "+words.length);
 }
 
 function prevWord() {
@@ -74,7 +76,7 @@ function startCards(select_val) {
         if (item.category === select_val) {
             words = item.wordsList;
         }
-
+        $('#counter').text(0 + " / "+ words.length);
     });
 
     startRotatate();
