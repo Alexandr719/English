@@ -124,6 +124,8 @@ body {
      margin-top: 10px;
  }
 .wordButton {
+    text-align: center;
+    cursor: pointer;
     display: block;
     width: 300px;
     margin: 120px auto;

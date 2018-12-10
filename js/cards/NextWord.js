@@ -2,6 +2,7 @@ let massIndex;
 let a;
 let soundWord;
 let words;
+let learnsWords = [];
 
 function startRotatate() {
     massIndex = 0;
@@ -18,6 +19,7 @@ function nextWord() {
     } else {
         massIndex++;
     }
+
     pasteWordInHtmlByIndex(massIndex);
 
     $('#counter').text(massIndex % words.length + " / "+words.length);
@@ -37,6 +39,9 @@ function pasteWordInHtmlByIndex(index) {
     document.getElementById('currentRusWord').innerHTML = words[index].rusWord;
     document.getElementById('currentEngWord').innerHTML = words[index].engWord;
     soundWord = words[index].engWord.trim().toLowerCase();
+
+
+
 }
 
 function compareRandom(a, b) {
@@ -82,3 +87,17 @@ function startCards(select_val) {
     startRotatate();
 
 }
+
+
+$('#learners_words').click(function () {
+    learnsWords.push(words[massIndex]);
+    let indexToRemove = wordsList.findIndex(obj => obj.category ==="learner");
+    wordsList.splice(indexToRemove , 1);
+    let learnWord = new WordWithCategory(learnsWords,"Learners");
+    wordsList.push(learnWord);
+    selectAllCategories();
+
+});
+
+
+

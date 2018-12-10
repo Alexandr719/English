@@ -861,6 +861,7 @@ let professions = [
 let words_7 = new WordWithCategory(professions,"Professions");
 
 
+
 //конечный объект со всеми словами
 let wordsList = [];
 wordsList.push(words_1);
@@ -872,16 +873,20 @@ wordsList.push(words_6);
 wordsList.push(words_7);
 wordsList.push(words_8);
 
+selectAllCategories();
 //вставка в select всех категорий слов
- wordsList.forEach(function(item, i, arr) {
-     $("#words_category").append("<option value=" + item.category + ">" + item.category + "</option>");
- });
+function selectAllCategories() {
+    $("#words_category").empty();
+    $(".tabs").empty();
+    wordsList.forEach(function (item, i, arr) {
+        $("#words_category").append("<option value=" + item.category + ">" + item.category + "</option>");
+    });
 
-wordsList.forEach(function(item, i, arr) {
-    $(".tabs").append( "<li class=\"tab col s1\"><a href=\"#test1\"><h6 onclick=f("+item.category+")>"
-        + item.category +"</h6></a></li>");
-});
-
+    wordsList.forEach(function (item, i, arr) {
+        $(".tabs").append("<li class=\"tab col s1\"><a href=\"#test1\"><h6 onclick=f(" + item.category + ")>"
+            + item.category + "</h6></a></li>");
+    });
+};
 
 
 

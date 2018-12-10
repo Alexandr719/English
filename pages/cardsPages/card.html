@@ -42,7 +42,9 @@
     <div id="counter">1</div>
 <div class="randomizer">
     <input id="randomCheck" type="checkbox" onclick="randomize()">
+
     <label class="randomLabel" for="randomCheck" >Random</label>
+
 </div>
 
 
@@ -50,6 +52,7 @@
 
 
 <div class="wrapper">
+
       <div class="cardWrapper">                                          <!--лучше это не трогать и оставить как есть-->
         <div class="cardContainer">
             <div class="card">
@@ -67,8 +70,11 @@
 
 
 </div>
+
 <input class="wordButton" onclick="nextWord()" type="button" value="Next word">
 <input class="wordButton" onclick="prevWord()" type="button" value="Previous word">
+
+<span id="learners_words" class="wordButton">Add into "Learners"</span>
 
 
 
@@ -82,7 +88,9 @@
 <script src="../../js/words/dictionary_words.js"></script>
 <script src="../../js/cards/NextWord.js"></script>
 <script src="../../js/cards/RotateCard.js"></script>
+<script src="../../js/cards/relearnWords.js"></script>
 <script src="../../js/side_nav.js"></script>
+
 
 
 
