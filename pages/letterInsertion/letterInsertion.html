@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Letter insertion</title>
     <link rel="stylesheet" href="../../styles/Styles.css">
     <link rel="stylesheet" href="../../styles/mainStyles.css">
     <link rel="stylesheet" href="../../styles/side_nav.css">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 <body>
 <nav class="navbar">
@@ -33,30 +34,45 @@
 <div id="side-menu" class="side-nav">
     <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
     <a href="../../index.html">Home</a>
-
 </div>
+
 
 <div id="main">
-<div class="main_block">
+    <div id="testArea">
 
-<span>Text</span>
-   <input type="text"  >
-    <button>Check</button>
+        <div id="counter">1</div>
+        <div id="eng"></div>
+
+
+        <div id="flex">
+            <span id="errorWord"></span>
+          <input type="text" id="users_text">
+            <button id="check_button" onclick="check()">Check</button>
+            <button id=next_button" onclick="next()">Next</button>
+
+        </div>
+
+
+
+    </div>
+
+
+    <button onclick="startScript()">Restart</button>
+
+
+
+    Category:  <select id = "words_category" size="1" name="test_level">
+    <!--Selected all categories-->
+</select>
+
+
+
+    <div id="result"></div>
+    <div id="wrong"></div>
 
 </div>
-
-
-    <select id = "words_category" size="1" name="test_level">
-        <!--Selected all categories-->
-    </select>
-</div>
-
-
-
-
-
 <script src="../../js/words/dictionary_words.js"></script>
-<script src="../../js/test/testRus.js"></script>
+<script src="../../js/letterInsetrion/letterinseption.js"></script>
 <script src="../../js/side_nav.js"></script>
 
 </body>

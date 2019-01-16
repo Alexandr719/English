@@ -151,3 +151,7 @@ body {
     text-transform: uppercase;
 
 }
+
+.front .fa:hover{
+    color: black;
+}

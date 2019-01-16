@@ -22,3 +22,21 @@
     width: 400px;
     font-size: 0.5em;
 }
+#flex input{
+    font-size: 25pt;
+}
+#flex button{
+    font-size: 25pt;
+       border: none;
+    color: white;
+    background-color: #e03366;
+    text-align: center;
+    padding: 15px 15px;
+    margin: 10px 10px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+#flex span{
+    font-size: 15pt;
+    width: 100%;
+    text-align: center;
+}

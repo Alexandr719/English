@@ -1,6 +1,6 @@
 
 $('.card').click(function(event){
-    if(!(event.target ==$('.fa-volume-move')[0])){
+    if(!(event.target ==$('.fa')[0])){
 
         $(this).toggleClass('flipped');
     }

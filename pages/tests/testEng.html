@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Test</title>
     <link rel="stylesheet" href="../../styles/Styles.css">
     <link rel="stylesheet" href="../../styles/mainStyles.css">
     <link rel="stylesheet" href="../../styles/side_nav.css">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/font-awesome-4.7.0/css/font-awesome.css">
 </head>
 <body>
 <nav class="navbar">
@@ -64,23 +65,21 @@
 
 </div>
 <button onclick="startTest()">Restart</button>
-<select id = "test_level" size="1" name="test_level">
+
+
+    Level of difficulty<select id = "test_level" size="1" name="test_level">
     <option value="Suck">Suck</option>
     <option value="Easy">Easy</option>
     <option selected value=Middle>Middle</option>
     <option value="Hard">Hard</option>
     <option value="Painful_death">Painful death</option>
 </select>
-
-
-<select id = "words_category" size="1" name="test_level">
+Category:  <select id = "words_category" size="1" name="test_level">
     <!--Selected all categories-->
 </select>
 
 
 
-<div id="result"></div>
-<div id="wrong"></div>
 
 </div>
 <script src="../../js/words/dictionary_words.js"></script>

@@ -58,12 +58,13 @@ function randomize() {
 }
 
 function playAudio() {
+    console.log("Play");
     let msg = new SpeechSynthesisUtterance(soundWord);
     msg.lang = 'en-US';
     window.speechSynthesis.speak(msg);
  }
 
-$(".fa-volume-move").click(function () {
+$(".front .fa").click(function () {
     playAudio();
 });
 
