@@ -28,12 +28,15 @@ function filterDictionary(checked_values, patternText) {
                 }
             });
         }
+
         inputIntoHtml(dictionary_words);
     })
+
 }
 
 
 function inputIntoHtml(dictionary_words) {
+    console.log(dictionary_words.length);
     $(".word_list").empty();
     for (let i = 0; i < dictionary_words.length; i++) {
         let word_item = document.createElement('div');
@@ -70,6 +73,4 @@ $('.filtrbtn').click(function(){
     }else{
         $('.filter').show("slow" );
     }
-
-
 });

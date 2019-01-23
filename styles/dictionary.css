@@ -35,7 +35,6 @@ margin-top: 10px;
 }
 .word_list_eng{
    width: 500px;
-
     text-align: center;
     padding: 3px 10px;
     background-color: #e03366 ;
@@ -44,7 +43,6 @@ margin-top: 10px;
 }
 .word_list_rus{
     width: 500px;
-
     padding: 3px 10px;
     text-align: center;
     background-color: #2aa9e0;
@@ -97,4 +95,10 @@ margin-top: 10px;
         border-radius: 10px;
     }
 }
+@media all and (max-width : 500px) {
 
+    .word_list_eng, .word_list_rus{
+        width: 100vw;
+    }
+
+}
