@@ -13,5 +13,5 @@ massWords.forEach(function (item){
 
 
     let word = item.split('=');
-    console.log("{ engWord: '"+word[0]+"' , rusWord: '"+word[1]+"' },");
+    console.log("{ engWord: '"+currentWord[0]+"' , rusWord: '"+currentWord[1]+"' },");
 });

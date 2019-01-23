@@ -1,104 +1,123 @@
-let massIndex;
-let a;
-let soundWord;
-let words;
-let learnsWords = [];
-
-function startRotatate() {
-    massIndex = 0;
-    a = "button" + 1;
-    soundWord = words[0].engWord.trim().toLowerCase();
-    pasteWordInHtmlByIndex(massIndex);
-}
-
-
-function nextWord() {
-
-    if (massIndex > words.length - 2) {
-        massIndex = 0;
-    } else {
-        massIndex++;
+let view = {
+    showCount: function (currentValue, maxValue) {
+        $('#counter').text(currentValue + " / " + maxValue);
+    },
+    showWord: function (currentWord) {
+        document.getElementById('currentRusWord').innerHTML = currentWord.rusWord;
+        document.getElementById('currentEngWord').innerHTML = currentWord.engWord;
     }
-
-    pasteWordInHtmlByIndex(massIndex);
-
-    $('#counter').text(massIndex % words.length + " / "+words.length);
-}
-
-function prevWord() {
-    if (massIndex === 0) {
-        massIndex = words.length - 1;
-    } else {
-        massIndex--;
-    }
-    pasteWordInHtmlByIndex(massIndex);
-}
-
-function pasteWordInHtmlByIndex(index) {
-
-    document.getElementById('currentRusWord').innerHTML = words[index].rusWord;
-    document.getElementById('currentEngWord').innerHTML = words[index].engWord;
-    soundWord = words[index].engWord.trim().toLowerCase();
-
-
-
-}
-
-function compareRandom(a, b) {
-    return Math.random() - 0.5;
-}
-
-function randomize() {
-    let random = document.getElementById("randomCheck").checked;
-    if (random) {
-        words = words.sort(compareRandom);
-    }
-    pasteWordInHtmlByIndex(0);
-
-}
-
-function playAudio() {
-    console.log("Play");
-    let msg = new SpeechSynthesisUtterance(soundWord);
-    msg.lang = 'en-US';
-    window.speechSynthesis.speak(msg);
- }
-
-$(".front .fa").click(function () {
-    playAudio();
-});
-
-let select_val = $("select#words_category").val();
-startCards(select_val);
-
-$("#words_category").change(function () {
-    select_val = $("select#words_category").val();
-    startCards(select_val);
-});
-
-
-function startCards(select_val) {
-    wordsList.forEach(function (item, i, arr) {
-        if (item.category === select_val) {
-            words = item.wordsList;
+};
+let model = {
+    learners: [],
+    words: [],
+    counterValue: 0,
+    maxCounterValue: 10,
+    incrementCounter: function () {
+        this.counterValue = (this.counterValue + 1) % this.maxCounterValue;
+        view.showCount(this.counterValue, this.maxCounterValue);
+        view.showWord(this.words[this.counterValue]);
+    },
+    decrementCounter: function () {
+        if (this.counterValue === 0) {
+            this.counterValue = this.maxCounterValue - 1;
+        } else {
+            this.counterValue--;
         }
-        $('#counter').text(0 + " / "+ words.length);
-    });
 
-    startRotatate();
+        view.showCount(this.counterValue, this.maxCounterValue);
+        view.showWord(this.words[this.counterValue]);
+    },
+    setWords: function (categoryCategoty, random) {
+        let currentWords = [];
+        wordsList.forEach(function (item) {
+            if (item.category === categoryCategoty) {
+                currentWords = item.wordsList;
+            }
+        });
 
-}
+        if (random) {
+            let shuffleWords = array => array.sort(() => Math.random() - 0.5);
+            this.words = shuffleWords(currentWords);
+        } else {
+
+            this.words = currentWords;
+        }
+
+        this.counterValue = 0;
+        this.maxCounterValue = this.words.length;
+        view.showCount(this.counterValue, this.maxCounterValue);
+        view.showWord(this.words[this.counterValue]);
+    },
+    addLearnWord: function () {
+        this.learners.push(this.words[this.counterValue]);
+        let indexToRemove = wordsList.findIndex(obj => obj.category === "learner");
+        wordsList.splice(indexToRemove, 1);
+        let learnWord = new WordWithCategory(this.learners, "Learners");
+        wordsList.push(learnWord);
+        //todo
+        selectAllCategories(); //add into view
+    }
 
 
-$('#learners_words').click(function () {
-    learnsWords.push(words[massIndex]);
-    let indexToRemove = wordsList.findIndex(obj => obj.category ==="learner");
-    wordsList.splice(indexToRemove , 1);
-    let learnWord = new WordWithCategory(learnsWords,"Learners");
-    wordsList.push(learnWord);
-    selectAllCategories();
+};
+let controller = {
+    nextWordClick: function () {
+        model.incrementCounter();
 
-});
+    },
+    prewWordClick: function () {
+        model.decrementCounter();
+    },
+    playWord: function () {
+        let currentWord = model.words[model.counterValue]
+            .engWord.trim().toLowerCase();
+        let msg = new SpeechSynthesisUtterance(currentWord);
+        msg.lang = 'en-US';
+        window.speechSynthesis.speak(msg);
+    },
+    selectCategory: function () {
+        let selectedCategoty = $("select#words_category").val();
+        let random = document.getElementById("randomCheck").checked;
+        model.setWords(selectedCategoty, random);
+    },
+    addLearners: function () {
+        model.addLearnWord();
+    }
 
+};
+(function () {
+    let app = {
+        init: function () {
+
+            //Изначальная инициализация выбранной категории
+            controller.selectCategory();
+            this.main();
+            this.event();
+        },
+        main: function () {
+
+        },
+        event: function () {
+
+            document.getElementById("nextWord").onclick = controller.nextWordClick;
+            document.getElementById("prewWord").onclick = controller.prewWordClick;
+            document.getElementById("learners_words").onclick = controller.addLearners;
+
+            $(".front .fa").click(function () {
+                controller.playWord("hello");
+            });
+
+            $("#words_category").change(function () {
+                controller.selectCategory();
+            });
+            $('#randomCheck').change(function () {
+                controller.selectCategory();
+            });
+
+
+        }
+    };
+    app.init();
+})();
 
 
