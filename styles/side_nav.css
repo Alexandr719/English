@@ -41,8 +41,22 @@
     padding-top:90px;
     transition:0.5s;
 }
+.profile-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    right:-2px;
+    background-color: #4583ff;
+    opacity:1;
+    overflow-x:hidden;
+    padding-top:90px;
+    transition:0.5s;
+    border: 1px solid rgb(160, 28, 163) ;
+}
 
-.side-nav a{
+.side-nav a, .profile-nav a{
     padding:10px 10px 10px 30px;
     text-decoration:none;
     font-size:22px;
@@ -54,6 +68,9 @@
 .side-nav a:hover{
     color:#fff;
 }
+.profile-nav a:hover{
+    color:#fff;
+}
 
 .side-nav .btn-close{
     position:absolute;
@@ -62,6 +79,13 @@
     font-size:36px;
     margin-left:50px;
 }
+.profile-nav .profile-close{
+    position:absolute;
+    top:0;
+    left:22px;
+    font-size:36px;
+    margin-right:50px;
+}
 
 #main{
     transition:margin-left 0.5s;
@@ -69,7 +93,9 @@
     overflow:hidden;
     width:100%;
 }
-
+#navbar_user_profile{
+    float: right;
+}
 @media(max-width:568px){
     .navbar-nav{display:none}
 }

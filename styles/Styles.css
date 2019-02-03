@@ -1,21 +1,23 @@
-body{
+body {
 
     margin: 0;
     padding: 0;
 }
-#counter{
+
+#counter {
     text-align: right;
     font-size: 30px;
     padding-right: 10px;
     margin-top: 10px;
 }
-#testTimer{
+
+#testTimer {
     font-size: 30px;
     float: left;
     margin-left: 10px;
 }
 
-#eng{
+#eng {
 
     width: auto;
     color: white;
@@ -25,10 +27,12 @@ body{
     padding: 20px 0px;
     margin: 40px auto;
 }
-#eng:first-letter{
+
+#eng:first-letter {
     text-transform: uppercase;
 }
-#flex{
+
+#flex {
 
     display: flex;
     flex-direction: row;
@@ -36,7 +40,8 @@ body{
     flex-wrap: wrap;
 
 }
-.rus{
+
+.rus {
     min-width: 300px;
     border: none;
     color: white;
@@ -47,27 +52,87 @@ body{
     margin: 10px 10px;
     box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
-.rus:hover{
+
+.rus:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
-#wrongWords{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-.wrongWord{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
-.engWord,.rusWord{
+
+
+
+
+.engWord, .rusWord {
     font-size: 20px;
     padding: 10px;
 }
+.wrongWord{
+    text-align: center;
+}
+.wrongWord b {
+    cursor: pointer;
+}
 
-@media all and (max-width : 1000px) {
+.wrongWord_li {
+    display: flex;
+    flex-direction: row;
+}
+
+#wrongWords_list {
+    width: 100vw;
+    margin-top: 10px;
+    color: black;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.word_item {
+    margin-top: 10px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+
+}
+
+.word_list_eng {
+    width: 500px;
+    text-align: center;
+    padding: 3px 10px;
+    background-color: #e03366;
+    word-wrap: break-word;
+
+}
+
+.word_list_rus {
+    width: 500px;
+    padding: 3px 10px;
+    text-align: center;
+    background-color: #2aa9e0;
+    word-wrap: break-word;
+}
+
+@media all and (max-width: 1000px) {
     #flex {
         flex-direction: column;
+    }
+
+    @media all and (max-width: 1000px) {
+
+        .word_item {
+            grid-template-columns: repeat(1, 1fr);
+            background-color: #e03366;
+            border-radius: 10px;
+        }
+    }
+    @media all and (max-width: 500px) {
+
+        .word_list_eng, .word_list_rus {
+            width: 100vw;
+        }
+
     }
 }

@@ -13,7 +13,7 @@
 <body>
 <div id="wrapper">
     <div id="navbar">
-    <nav class="navbar">
+        <nav class="navbar">
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">
@@ -24,150 +24,157 @@
       </a>
     </span>
 
-        <ul class="navbar-nav">
-            <li><a href="#">Home</a></li>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li id="navbar_user_profile"><a href="#">User profile</a></li>
+
+            </ul>
+        </nav>
+
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="#">Home</a>
+
+        </div>
+        <div id="profile-menu" class="profile-nav">
+            <a href="#"  class="profile-close" onclick="closeSlideMenu()">&times;</a>
+
+
+        </div>
+    </div>
+     <div id="main">
+        <ul class="grid">
+            <li class="grid__item">
+
+                <a href="pages/cardsPages/card.html" class="card">
+                    <div class="card__image">
+                        <img src="img/free-business-cards-psd-mockup-y4.jpg" alt="cards"/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">Cards</h2>
+                        <div class="card__body">
+                            <p>Memorize the words by cards.</p>
+                        </div>
+
+                    </article>
+                </a>
+
+            </li>
+            <li class="grid__item">
+
+                <a href="pages/tests/testEng.html" class="card">
+                    <div class="card__image">
+                        <img src="img/The-classy-way-to-approach-context-driven-testing.png" alt=""/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">Test Eng-Rus</h2>
+                        <div class="card__body">
+                            <p>Complete the test, translate from english to russian</p>
+                        </div>
+                        <div class="card__footer">
+
+                        </div>
+                    </article>
+                </a>
+
+            </li>
+            <li class="grid__item">
+
+                <a href="pages/phrases/phrases.html" class="card">
+                    <div class="card__image">
+                        <img src="img/dialogs.png" alt=""/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">Phrases</h2>
+                        <div class="card__body">
+                            <p>Learn english phrases</p>
+                        </div>
+                        <div class="card__footer">
+
+                        </div>
+                    </article>
+                </a>
+
+            </li>
+            <li class="grid__item">
+
+                <a href="pages/letterInsertion/letterInsertion.html" class="card">
+                    <div class="card__image">
+                        <img src="img/guess_word.png" alt=""/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">
+
+                            Letter insertion</h2>
+                        <div class="card__body">
+                            <p>Learn english with
+                                letter insertion </p>
+                        </div>
+                        <div class="card__footer">
+
+                        </div>
+                    </article>
+                </a>
+
+            </li>
+            <li class="grid__item">
+
+                <a href="pages/pageRules/rules.html" class="card">
+                    <div class="card__image">
+                        <img src="img/know-the-rules.jpg" alt=""/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">Rules</h2>
+                        <div class="card__body">
+                            <p>Learn rules.</p>
+                        </div>
+                        <div class="card__footer">
+
+                        </div>
+                    </article>
+                </a>
+
+            </li>
+            <li class="grid__item">
+
+                <a href="pages/dictionary/dictionary.html" class="card">
+                    <div class="card__image">
+                        <img src="img/dictionary.jpg" alt=""/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">Distionary</h2>
+                        <div class="card__body">
+                            <p>You can see all words here.</p>
+                        </div>
+                        <div class="card__footer">
+
+                        </div>
+                    </article>
+                </a>
+
+            </li>
+            <li class="grid__item">
+
+                <a href="#" class="card" id="href_lib">
+                    <div class="card__image">
+                        <img src="img/books-2463779_1920.jpg" alt=""/>
+                    </div>
+                    <article class="card__content">
+                        <h2 class="card__title">Library</h2>
+                        <div class="card__body">
+                            <p>You can see useful information</p>
+                        </div>
+                        <div class="card__footer">
+
+                        </div>
+                    </article>
+                </a>
+
+            </li>
 
         </ul>
-    </nav>
-
-    <div id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <a href="#">Home</a>
-
     </div>
-    </div>
-    <div id="main">
-    <ul class="grid">
-        <li class="grid__item">
-
-            <a href="pages/cardsPages/card.html" class="card">
-                <div class="card__image">
-                    <img src="img/free-business-cards-psd-mockup-y4.jpg" alt="cards"/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">Cards</h2>
-                    <div class="card__body">
-                        <p>Memorize the words by cards.</p>
-                    </div>
-
-                </article>
-            </a>
-
-        </li>
-        <li class="grid__item">
-
-            <a href="pages/tests/testEng.html" class="card">
-                <div class="card__image">
-                    <img src="img/The-classy-way-to-approach-context-driven-testing.png" alt=""/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">Test Eng-Rus</h2>
-                    <div class="card__body">
-                        <p>Complete the test, translate from english to russian</p>
-                    </div>
-                    <div class="card__footer">
-
-                    </div>
-                </article>
-            </a>
-
-        </li>
-        <li class="grid__item">
-
-            <a href="pages/phrases/phrases.html" class="card">
-                <div class="card__image">
-                    <img src="img/dialogs.png" alt=""/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">Phrases</h2>
-                    <div class="card__body">
-                        <p>Learn english phrases</p>
-                    </div>
-                    <div class="card__footer">
-
-                    </div>
-                </article>
-            </a>
-
-        </li>
-        <li class="grid__item">
-
-            <a href="pages/letterInsertion/letterInsertion.html" class="card">
-                <div class="card__image">
-                    <img src="img/guess_word.png" alt=""/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">
-
-                        Letter insertion</h2>
-                    <div class="card__body">
-                        <p>Learn english with
-                            letter insertion </p>
-                    </div>
-                    <div class="card__footer">
-
-                    </div>
-                </article>
-            </a>
-
-        </li>
-        <li class="grid__item">
-
-            <a href="pages/pageRules/rules.html" class="card">
-                <div class="card__image">
-                    <img src="img/know-the-rules.jpg" alt=""/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">Rules</h2>
-                    <div class="card__body">
-                        <p>Learn rules.</p>
-                    </div>
-                    <div class="card__footer">
-
-                    </div>
-                </article>
-            </a>
-
-        </li>
-        <li class="grid__item">
-
-            <a href="pages/dictionary/dictionary.html" class="card">
-                <div class="card__image">
-                    <img src="img/dictionary.jpg" alt=""/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">Distionary</h2>
-                    <div class="card__body">
-                        <p>You can see all words here.</p>
-                    </div>
-                    <div class="card__footer">
-
-                    </div>
-                </article>
-            </a>
-
-        </li>
-        <li class="grid__item">
-
-            <a href="pages/library/lib.html" class="card">
-                <div class="card__image">
-                    <img src="img/books-2463779_1920.jpg" alt=""/>
-                </div>
-                <article class="card__content">
-                    <h2 class="card__title">Library</h2>
-                    <div class="card__body">
-                        <p>You can see useful information</p>
-                    </div>
-                    <div class="card__footer">
-
-                    </div>
-                </article>
-            </a>
-
-        </li>
-
-    </ul>
-    </div>
+    <div id="content"></div>
 </div>
 <script src="js/side_nav.js"></script>
 </body>

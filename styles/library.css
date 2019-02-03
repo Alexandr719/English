@@ -1,11 +1,11 @@
-.grid{
+#library .grid{
     margin: 10px auto;
     display: grid;
     width: 80%;
     grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
 }
-.grid_item{
+#library .grid_item{
     border: 2px solid black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,22 +13,22 @@
 
 
 }
-.bg_film{
+#library .bg_film{
     background-image: url("../img/films.jpg");
 }
-.bg_text{
+#library .bg_text{
     background-image: url("../img/papers.jpg");
 }
-.bg_game{
+#library .bg_game{
     background-image: url("../img/gamepad.png");
 }
-.bg_rule{
+#library .bg_rule{
     background-image: url("../img/rule.jpg");
 }
-.bg_dict{
+#library .bg_dict{
     background-image: url("../img/dictionary2.jpg");
 }
 
-hr{
+#library hr{
     color: black;
 }

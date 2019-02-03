@@ -38,52 +38,54 @@
 
 
 <div id="main">
-<div id="testArea">
-    <div id="testTimer"></div>
-    <div id="counter">1</div>
-    <div id="eng"></div>
+    <div id="testArea">
+        <div id="testTimer"></div>
+        <div id="counter">1</div>
+
+        <div id="main_test_area">
+            <div id="eng"></div>
+
+            <!--Buttosn change-->
+            <div id="flex">
+                <button class="rus" id="button0"></button>
+                <button class="rus" id="button1"></button>
+                <button class="rus" id="button2"></button>
+                <button class="rus" id="button3"></button>
+            </div>
 
 
-    <div id="flex">
-        <button onclick="change(1)" class="rus" id="button1"></button>
-        <button onclick="change(2)" class="rus" id="button2"></button>
-        <button onclick="change(3)" class="rus" id="button3"></button>
-        <button onclick="change(4)" class="rus" id="button4"></button>
+        </div>
     </div>
+    <div id="wrongWords">
+
+        <div class="wrongWord">
+            WrongWords:<b>&#9660;</b>
+
+        </div>
+        <div id="wrongWords_list">
+
+        </div>
 
 
-
-</div>
-
-<div id="wrongWords">
-
-    <div class="wrongWord">
-        <div class="engWord">Eng</div>
-        <div class="rusWord">Rus</div>
     </div>
+    <button id="test_restart">Restart</button>
 
 
-</div>
-<button onclick="startTest()">Restart</button>
-
-
-    Level of difficulty<select id = "test_level" size="1" name="test_level">
+    Level of difficulty<select id="test_level" size="1" name="test_level">
     <option value="Suck">Suck</option>
     <option value="Easy">Easy</option>
     <option selected value=Middle>Middle</option>
     <option value="Hard">Hard</option>
     <option value="Painful_death">Painful death</option>
 </select>
-Category:  <select id = "words_category" size="1" name="test_level">
+    Category: <select id="words_category" size="1" name="test_level">
     <!--Selected all categories-->
 </select>
 
 
-
-
 </div>
 <script src="../../js/words/dictionary_words.js"></script>
-<script src="../../js/test/testEng.js"></script>
+<script src="../../js/test/testEng2.js"></script>
 <script src="../../js/side_nav.js"></script>
 
 </body>

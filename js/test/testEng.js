@@ -1,20 +1,15 @@
-
 let firstPosRight;
 let shuffle ;  //перемешиваем массив слов
 let wrongMass = [];  //массив неверных слов
 let counter ;
 let leveltimeOut = 20;
 
-
 let select_val = $("select#words_category").val();
 startCards(select_val);
-
 $("#words_category").change(function () {
     select_val = $("select#words_category").val();
     startCards(select_val);
 });
-
-
 function startCards(select_val) {
     wordsList.forEach(function (item, i, arr) {
         if (item.category === select_val) {
@@ -26,15 +21,6 @@ function startCards(select_val) {
     startTest();
 
 }
-
-
-
-
-
-
-
-
-
 $( "#test_level" ).change(function() {
     let select_val = $("select#test_level").val();
     if(select_val === "Easy"){
@@ -50,10 +36,6 @@ $( "#test_level" ).change(function() {
     }
     startTest();
 });
-
-
-
-
 startTest();  //начало теста
 
 function startTest() {
@@ -79,7 +61,6 @@ function startTest() {
     }
     $('#counter').html("0/" + shuffle.length);
 }
-
 function change(buttonNumber) {
 
     if (counter === 0 && buttonNumber == firstPosRight) {
@@ -122,7 +103,6 @@ function change(buttonNumber) {
 
     }
 }
-
 function generateRandomMass(rigntNumber) {
     var outArray = []; // массив, в котором будем хранить уникальные числа
     outArray[0] = rigntNumber;
@@ -151,11 +131,9 @@ function generateRandomMass(rigntNumber) {
 
     return outArray;
 }
-
 function compareRandom(a, b) {
     return Math.random() - 0.5;
 }
-
 //вставка неверных слов
 function getWrongList(engWord, rusWord) {
 
@@ -164,8 +142,6 @@ function getWrongList(engWord, rusWord) {
         '</div>');
 
 }
-
-
 
 var timerGo = setInterval(function() {
     if(counter > 0) {
