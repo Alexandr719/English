@@ -6,3 +6,10 @@ $('.card').click(function(event){
     }
 
 });
+$('html').keydown(function(e){ //отлавливаем нажатие клавиш
+    if (e.which === 32 ) {
+
+        $('.card').toggleClass('flipped');
+    }
+
+});
