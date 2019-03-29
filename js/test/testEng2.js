@@ -253,7 +253,6 @@ let controller = {
             $(".rus").on('click', function (event) {
                 let last = event.target.id.toString().slice(-1);
                 controller.checkAnswer(last);
-
             });
 
             $("select#words_category").change(function () {
@@ -268,7 +267,6 @@ let controller = {
             });
             $(".wrongWord b").click(function () {
                view.showWrongWords();
-
             });
 
         }

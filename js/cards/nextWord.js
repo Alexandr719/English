@@ -99,8 +99,6 @@ let controller = {
         },
         event: function () {
 
-            document.getElementById("nextWord").onclick = controller.nextWordClick;
-
             $('html').keydown(function(e){ //отлавливаем нажатие клавиш
                 if (e.which === 37 ) {
                  controller.prewWordClick();
@@ -110,12 +108,12 @@ let controller = {
 
             });
 
-
+            document.getElementById("nextWord").onclick = controller.nextWordClick;
             document.getElementById("prewWord").onclick = controller.prewWordClick;
             document.getElementById("learners_words").onclick = controller.addLearners;
 
             $(".front .fa").click(function () {
-                controller.playWord("hello");
+                controller.playWord();
             });
 
             $("#words_category").change(function () {
