@@ -12,11 +12,7 @@ function closeSlideMenu(){
 
 $("#navbar_user_profile").click(function () {
     document.getElementById('profile-menu').style.width = '350px';
-
-
 });
-
-
 
 $('#href_lib').on('click', function(){
     $( "#content" ).load( "/pages/library/lib.html");

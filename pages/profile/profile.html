@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../styles/mainStyles.css">
+    <link rel="stylesheet" href="../../styles/profile_page.css">
+    <link rel="stylesheet" href="../../styles/side_nav.css">
+    <title>Profile</title>
+</head>
+<body>
+
+<div id="navbar">
+    <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li id="navbar_user_profile"><a href="#">User profile</a></li>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+
+    </div>
+    <div id="profile-menu" class="profile-nav">
+        <a href="#" class="profile-close" onclick="closeSlideMenu()">&times;</a>
+
+
+    </div>
+</div>
+<div class="profile_page">
+
+    <div class="profile_page_profile">
+        <img src="../../img/exit.png" alt="Exit" class="profile_exit_button">
+        <img class="profile_photo" src="../../img/books-2463779_1920.jpg" alt="Profile img">
+        <span class="profile_title">My profile:</span>
+        <div class="profile_info">
+            <li><span>Login:  </span> <span class="profile_info_data">Alexander</span>
+                <button>Edit</button>
+            </li>
+            <li><span>Email:  </span> <span class="profile_info_data">filatov.alexandr@gmail.com</span>
+                <button>Edit</button>
+            </li>
+            <li><span>First name:  </span> <span class="profile_info_data">Alexander</span>
+                <button>Edit</button>
+            </li>
+            <li><span>Last name:  </span> <span class="profile_info_data">Filatov</span>
+                <button>Edit</button>
+            </li>
+            <li><span>Level:  </span> <span class="profile_info_data">1</span>
+                <button>Edit</button>
+            </li>
+            <li><span>Points:  </span> <span class="profile_info_data">1</span>
+                <button>Edit</button>
+            </li>
+            <br>
+            <li><span>Date of registration:  </span> <span class="profile_info_data">29.03.2019</span></li>
+            <li><span>Last active date:  </span> <span class="profile_info_data">29.03.2019</span></li>
+
+
+        </div>
+
+    </div>
+    <div class="profile_page_friends">Friends</div>
+    <div class="profile_page_chats">Chats</div>
+    <div class="profile_page_communities">Communities</div>
+    <div class="profile_page_achieves">Achieves</div>
+
+</div>
+</body>
+</html>
