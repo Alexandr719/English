@@ -6,9 +6,10 @@
     <title>English Cards</title>
     <link rel="stylesheet" href="styles/mainStyles.css">
     <link rel="stylesheet" href="styles/side_nav.css">
+    <link rel="stylesheet" href="styles/userProfile.css">
+    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     </span>
 
             <ul class="navbar-nav">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="main.html">Home</a></li>
                 <li id="navbar_user_profile"><a href="#">User profile</a></li>
             </ul>
         </nav>
@@ -38,14 +39,59 @@
         </div>
         <div id="profile-menu" class="profile-nav">
             <a href="#"  class="profile-close" onclick="closeSlideMenu()">&times;</a>
+            <aside>
+                <img id="user" src="img/user.png" alt="user">
+                <span>Login</span>
+                <div><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <label for="friends">Friends </label></div><input type = checkbox id="friends">
+                <div class="menu-item">
+                    <ul>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                    </ul>
+                </div>
+                <div><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <label for="chats">Chats</label></div><input type = checkbox id="chats">
+                <div class="menu-item">
+                    <ul>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                    </ul>
+                </div>
+                <div><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <label for="communities">Communities</label></div>
 
 
+
+                <input type = checkbox id="communities">
+                <div class="menu-item">
+                    <ul>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                        <li>lol</li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </div>
+
      <div id="main">
         <ul class="grid">
             <li class="grid__item">
-
                 <a href="pages/cardsPages/card.html" class="card">
                     <div class="card__image">
                         <img src="img/free-business-cards-psd-mockup-y4.jpg" alt="cards"/>
@@ -82,7 +128,7 @@
 
                 <a href="pages/phrases/phrases.html" class="card">
                     <div class="card__image">
-                        <img src="img/dialogs.png" alt=""/>
+                        <img src="/img/dialogs.png" alt=""/>
                     </div>
                     <article class="card__content">
                         <h2 class="card__title">Phrases</h2>
@@ -107,8 +153,7 @@
 
                             Letter insertion</h2>
                         <div class="card__body">
-                            <p>Learn english with
-                                letter insertion </p>
+                            <p>Learn english with letter insertion </p>
                         </div>
                         <div class="card__footer">
 
@@ -155,7 +200,7 @@
             </li>
             <li class="grid__item">
 
-                <a href="#" class="card" id="href_lib">
+                <a href="pages/library/lib.html" class="card" >
                     <div class="card__image">
                         <img src="img/books-2463779_1920.jpg" alt=""/>
                     </div>

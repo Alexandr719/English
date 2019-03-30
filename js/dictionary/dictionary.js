@@ -13,7 +13,7 @@ wordsList.forEach(function (item, i, arr) {
     filterDictionary(checked_values);
 });
 
-
+//YES
 function filterDictionary(checked_values, patternText) {
     let dictionary_words = [];
     wordsList.forEach(function (itemList) {
@@ -34,9 +34,8 @@ function filterDictionary(checked_values, patternText) {
 
 }
 
-
+//YES
 function inputIntoHtml(dictionary_words) {
-    console.log(dictionary_words.length);
     $(".word_list").empty();
     for (let i = 0; i < dictionary_words.length; i++) {
         let word_item = document.createElement('div');
@@ -74,3 +73,6 @@ $('.filtrbtn').click(function(){
         $('.filter').show("slow" );
     }
 });
+
+
+

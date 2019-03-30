@@ -3,13 +3,6 @@ let counter;
 let selectedWordCategory = $("select#words_category").val();
 startCards(selectedWordCategory);
 
-//If user change category
-$("#words_category").change(function () {
-    selectedWordCategory = $("select#words_category").val();
-    startCards(selectedWordCategory);
-});
-
-
 function startCards(select_val) {
     wordsList.forEach(function (item, i, arr) {
         if (item.category === select_val) {
@@ -21,15 +14,14 @@ function startCards(select_val) {
 
 
 function startScript() {
-    shuffle = words.sort(compareRandom);  //перемешиваем массив слов
+    shuffle = words.sort(compareRandom);
     counter = 0;
     $('#eng').html(shuffle[counter].rusWord);
     $('#counter').html("0/" + shuffle.length);
 }
-
+//That
 function check() {
     let usersText = $("#users_text").val();
-
         if(usersText.toLowerCase().trim() === shuffle[counter].engWord.toLowerCase().trim()){
             $('#eng').effect('highlight', {color: '#70e086'});
             $('#errorWord').html("");
@@ -39,10 +31,7 @@ function check() {
         }
 
 }
-
-
-
-
+//That
 function next() {
     $("#users_text").val("");
     counter++;
@@ -58,3 +47,8 @@ function next() {
 function compareRandom(a, b) {
     return Math.random() - 0.5;
 }
+//If user change category
+$("#words_category").change(function () {
+    selectedWordCategory = $("select#words_category").val();
+    startCards(selectedWordCategory);
+});

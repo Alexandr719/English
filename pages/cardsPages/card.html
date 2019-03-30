@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="navbar">
-<nav class="navbar">
+    <nav class="navbar">
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">
@@ -25,63 +25,61 @@
       </a>
     </span>
 
-    <ul class="navbar-nav">
-        <li><a href="../../index.html">Home</a></li>
+        <ul class="navbar-nav">
+            <li><a href="../../index.html">Home</a></li>
 
-    </ul>
-</nav>
+        </ul>
+    </nav>
 
-<div id="side-menu" class="side-nav">
-    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <a href="../../index.html">Home</a>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="../../index.html">Home</a>
 
-</div>
+    </div>
 </div>
 
 <div id="main">
-    <div id="counter">1</div>
-<div class="randomizer">
-    <input id="randomCheck" type="checkbox">
+    <div class="wordCards">
+        <div id="counter">1</div>
+        <div class="randomizer">
+            <input id="randomCheck" type="checkbox">
 
-    <label class="randomLabel" for="randomCheck" >Random</label>
+            <label class="randomLabel" for="randomCheck">Random</label>
 
-</div>
-
-
-
+        </div>
 
 
-<div class="wrapper">
+        <div class="wrapper">
 
-      <div class="cardWrapper">                                          <!--лучше это не трогать и оставить как есть-->
-        <div class="cardContainer">
-            <div class="card">
-                <div class="front">
-                    <h3 class="cardTitle" id="currentEngWord"></h3>
-                    <i class="fa fa-volume-up" aria-hidden="true"></i>
-                </div>
-                <div class="back">
-                    <h3 class="cardTitle" id="currentRusWord"></h3>
+            <div class="cardWrapper">
+                <!--лучше это не трогать и оставить как есть-->
+                <div class="cardContainer">
+                    <div class="card">
+                        <div class="front">
+                            <h3 class="cardTitle" id="currentEngWord"></h3>
+                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="back">
+                            <h3 class="cardTitle" id="currentRusWord"></h3>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
         </div>
+
+        <input class="wordButton" id="nextWord" type="button" value="Next word">
+        <input class="wordButton" id="prewWord" type="button" value="Previous word">
+
+        <span id="learners_words" class="wordButton">Add into "Learners"</span>
+
+
+        Category: <select id="words_category" size="1" name="test_level">
+        <!--Selected all categories-->
+    </select>
+
     </div>
-
-
-
-</div>
-
-<input class="wordButton" id="nextWord"  type="button" value="Next word">
-<input class="wordButton" id="prewWord"  type="button" value="Previous word">
-
-<span id="learners_words" class="wordButton">Add into "Learners"</span>
-
-
-
-Category: <select id = "words_category" size="1" name="test_level">
-  <!--Selected all categories-->
-</select>
-
 </div>
 </body>
 
@@ -89,8 +87,6 @@ Category: <select id = "words_category" size="1" name="test_level">
 <script src="../../js/cards/nextWord.js"></script>
 <script src="../../js/cards/RotateCard.js"></script>
 <script src="../../js/side_nav.js"></script>
-
-
 
 
 </html>

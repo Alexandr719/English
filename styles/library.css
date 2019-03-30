@@ -5,12 +5,12 @@
     grid-gap: 10px;
     grid-template-columns: repeat(5, 1fr);
 }
+
 #library .grid_item{
     border: 2px solid black;
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
-
 
 }
 #library .bg_film{

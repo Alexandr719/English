@@ -1,5 +1,5 @@
 
-.randomLabel{
+.wordCards .randomLabel{
     margin: 10px auto;
     padding: 5px;
     font-size: 1em;
@@ -10,14 +10,14 @@
     box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
 
-.randomizer input:checked ~ .randomLabel {
+.wordCards .randomizer input:checked ~ .randomLabel {
 
     background-color: #e03366;
 }
-.randomLabel:hover{
+.wordCards .randomLabel:hover{
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
 
-.randomizer input{
+.wordCards .randomizer input{
     display: none;
 }

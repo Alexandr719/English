@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-.animation {
+.wordCards .animation {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -13,7 +13,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.cardContainer {
+.wordCards .cardContainer {
     height: 100px;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -30,7 +30,7 @@ body {
     padding-left: 1%;
 }
 
-.card {
+.wordCards .card {
     margin: 60px auto;
     width: 450px;
     height: 200px;
@@ -47,15 +47,15 @@ body {
     transform-style: preserve-3d;
 }
 
-.card.flipped {
+.wordCards .card.flipped {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
-.card .front,
-.card .back {
+.wordCards .card .front,
+.wordCards .card .back {
     display: block;
     height: 100%;
     width: 100%;
@@ -73,14 +73,14 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.card .back {
+.wordCards .card .back {
     width: 100%;
     padding-left: 3%;
     padding-right: 3%;
 
 }
 
-.card .back {
+.wordCards .card .back {
     background: #03446A;
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
@@ -89,15 +89,15 @@ body {
 }
 
 /*Colors for front and back applied here*/
-.cardContainer:first-child .card .front {
+.wordCards .cardContainer:first-child .card .front {
     background: #2aa9e0;
 }
 
-.cardContainer:first-child .card .back {
+.wordCards .cardContainer:first-child .card .back {
     background: #2aa9e0;
 }
 
-.fa-volume-up {
+.wordCards .fa-volume-up {
     position: absolute;
     margin-top: -20px;
     right: 30px;
@@ -107,23 +107,23 @@ body {
 
 @media all and (max-width: 600px) {
 
-    .cardContainer:nth-child(3), .cardContainer:nth-child(4) {
+    .wordCards  .cardContainer:nth-child(3), .wordCards .cardContainer:nth-child(4) {
         margin-top: 3%;
     }
-    .card{
+    .wordCards  .card{
         width: 90%;
     }
 
 }
 
 
-#counter{
+.wordCards #counter{
      text-align: right;
      font-size: 30px;
      padding-right: 10px;
      margin-top: 10px;
  }
-.wordButton {
+.wordCards .wordButton {
     text-align: center;
     cursor: pointer;
     display: block;
@@ -140,18 +140,18 @@ body {
 
 }
 
-.wordButton:last-of-type {
+.wordCards .wordButton:last-of-type {
     margin-top: -100px;
     background-color: #e03366;
 }
-.wordButton:hover{
+.wordCards .wordButton:hover{
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
 }
-#currentEngWord:first-letter,#currentRusWord:first-letter{
+.wordCards #currentEngWord:first-letter, .wordCards #currentRusWord:first-letter{
     text-transform: uppercase;
 
 }
 
-.front .fa:hover{
+.wordCards .front .fa:hover{
     color: black;
 }

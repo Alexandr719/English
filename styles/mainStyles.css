@@ -6,7 +6,7 @@ body{
 
 @font-face {
     font-family: Itim Cyrillic; /* Гарнитура шрифта */
-    src: url(../fonts/11988.otf); /* Путь к файлу со шрифтом */
+    src: url(../../../../../ENGLISHCARDS/fonts/11988.otf); /* Путь к файлу со шрифтом */
 }
 
 a {
