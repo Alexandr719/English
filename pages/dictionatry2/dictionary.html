@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../styles/mainStyles.css">
+    <link rel="stylesheet" href="dic.css">
+    <link rel="stylesheet" href="switcher.css">
+    <link rel="stylesheet" href="../../styles/side_nav.css">
+</head>
+<body>
+<div id="navbar">
+    <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li id="navbar_user_profile"><a href="#">User profile</a></li>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#">Home</a>
+
+    </div>
+    <div id="profile-menu" class="profile-nav">
+        <a href="#" class="profile-close" onclick="closeSlideMenu()">&times;</a>
+
+
+    </div>
+</div>
+   <div class="dictionary">
+    <div class="pricing-container">
+        <div class="pricing-switcher">
+            <p class="fieldset">
+                <input type="radio" name="duration-1" value="My words" id="monthly-1" checked>
+                <label for="monthly-1">My words</label>
+                <input type="radio" name="duration-1" value="Community" id="yearly-1">
+                <label for="yearly-1">Community</label>
+                <span class="switch"></span>
+            </p>
+        </div>
+    </div>
+
+    <div class="dictionary_container">
+        <div class="dictionary_main">
+            <h1>Words</h1>
+            <div class="word_list">
+
+
+                <div class="word_item">
+                    <input class="word_list_eng" value="Hello" readonly="readonly"/>
+                    <input class="word_list_rus" value="Привет" readonly="readonly"/>
+                    <div class="word_item_image">
+                    <img src="pencil-case.png">
+                    <img src="delete.png">
+                    </div>
+                </div>
+
+
+
+
+<div class="word_item_add_word">Add word</div>
+
+
+            </div>
+
+
+        </div>
+        <div class="dictionary_left_bar">
+
+            <li><input type="text" value="Category#1" readonly="readonly"><img src="delete.png" alt="delete"> <img
+                    src="pencil-case.png" alt="Edit"></li>
+            <li class="active_dictionary_category"><input type="text" value="Category#1" readonly="readonly"><img
+                    src="delete.png" alt="delete"> <img src="pencil-case.png" alt="Edit"></li>
+            <li><input type="text" value="Category#1" readonly="readonly"><img src="delete.png" alt="delete"> <img
+                    src="pencil-case.png" alt="Edit"></li>
+            <li><input type="text" value="Category#1" readonly="readonly"><img src="delete.png" alt="delete"> <img
+                    src="pencil-case.png" alt="Edit"></li>
+            <li>Add caterogy</li>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

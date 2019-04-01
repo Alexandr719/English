@@ -1,0 +1,163 @@
+.dictionary_left_bar, .dictionary_main {
+    width: 100%;
+
+}
+
+.dictionary_left_bar {
+    margin-top: 30px;
+}
+
+.dictionary_container {
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+}
+
+.dictionary_left_bar li {
+    padding: 10px;
+    margin: 20px 30px 20px 50px;
+    cursor: pointer;
+    list-style-type: none; /* Убираем маркеры */
+    background-color: #4583ff;
+    text-decoration: none;
+    color: #000000;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    transition: -webkit-transform .1s ease-in;
+    transition: transform .1s ease-in;
+    transition: transform .1s ease-in, -webkit-transform .1s ease-in;
+
+}
+
+.dictionary_left_bar img {
+    float: right;
+    height: 20px;
+    width: 20px;
+
+}
+
+.dictionary_left_bar img:hover {
+    background-color: #851988;
+    border-radius: 50%;
+
+}
+
+.dictionary_left_bar input {
+    background-color: rgba(42, 169, 224, 0);
+    border: none;
+
+}
+
+.dictionary_left_bar li:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+
+}
+
+.active_dictionary_category {
+    margin-left: 20px !important;
+    margin-right: 50px !important;
+}
+
+.dictionary_left_bar li:last-of-type {
+    text-align: center;
+}
+
+.word_list {
+
+    margin-top: 10px;
+    color: black;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.word_item {
+  font-size: 1.3em;;
+    margin-top: 10px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(8, 1fr);
+    justify-self: center;
+
+}
+
+.word_list_eng {
+
+    font-size: 1em;
+    border: none;
+    width: 300px;
+    text-align: center;
+    padding: 3px 10px;
+    background-color: #e03366;
+    word-wrap: break-word;
+
+}
+
+.word_list_rus {
+    font-size: 1em;
+    border: none;
+    width: 300px;
+    padding: 3px 10px;
+    text-align: center;
+    background-color: #2aa9e0;
+    word-wrap: break-word;
+}
+
+.word_list_rus:first-letter {
+    text-transform: uppercase;
+}
+
+.word_list_eng:first-letter {
+    text-transform: uppercase;
+}
+
+.word_item .word_item_image {
+    display: flex;
+    flex-direction: row;
+}
+
+.word_item img {
+    float: right;
+    cursor: pointer;
+    margin-top: 2px;
+    height: 20px;
+    width: 20px;
+}
+
+.word_item img:hover {
+    background-color: #851988;
+    border-radius: 50%;
+}
+
+.word_item_add_word {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    margin-top: 10px;
+    background-color: #5c3191;
+}
+
+@media screen and (max-width: 1190px) {
+    .dictionary_container {
+
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .word_item {
+        margin-top: 10px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        justify-self: center;
+        background-color: #2aa9e0;
+
+    }
+}
